@@ -13,3 +13,16 @@ PlayZone is an online game store that offers a wide range of game genres and pla
     - To market and sell gaming products
     - To earn money and grow my company's profits
 
+## User Experience
+
+### User Category
+- PlayZone is directed towards gaming enthusiasts who are mostly interested in console gaming experience. 
+
+### User Expectations
+- A website with smooth navigation, responsive design, and good accessibility
+- A website that is visually appealing and well-designed
+- To easily find the product or the information i am looking for
+- An easy and secure authentication and registration process
+- Various games with different genres and platforms and multiple game consoles on different platforms as well.
+- Information about each game and console including product name, description, price, and more details
+- A smooth shopping experience and secure checkout
