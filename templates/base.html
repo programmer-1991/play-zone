@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
-    {% block meta %}
+    {% block extra_meta %}
     {% endblock %}
 
     {% block corecss%}
@@ -32,7 +32,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Play Zone {% block extra_title %}{endblock}</title>
+    <title>Play Zone {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
