@@ -3,9 +3,16 @@ html {
 }
 
 body {
-    background: url('/media/best-consoles ign.com.png') no-repeat center center fixed;
-    background-size: cover;
     height: calc(100vh - 10em);
     color: #555;
     font-family: 'Lato';
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }
