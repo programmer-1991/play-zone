@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    background: url('/media/best-consoles-ign.com.png') no-repeat center center / contain fixed;
     height: calc(100vh - 10em);
     color: #555;
     font-family: 'Lato';
