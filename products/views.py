@@ -11,5 +11,5 @@ def products_list(request):
     context = {
         'products': products,
     }
-
+    print(products)
     return render(request, 'products/products.html', context)
