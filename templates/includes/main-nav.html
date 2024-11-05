@@ -19,10 +19,10 @@
                 Games
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="games-link">
-                <a href="" class="dropdown-item">Nintendo</a>
-                <a href="" class="dropdown-item">Xbox</a>
-                <a href="" class="dropdown-item">Playstation</a>
-                <a href="" class="dropdown-item">All Games</a>
+                <a href="{% url 'products' %}?category=N_game" class="dropdown-item">Nintendo</a>
+                <a href="{% url 'products' %}?category=X_game" class="dropdown-item">Xbox</a>
+                <a href="{% url 'products' %}?category=P_game" class="dropdown-item">Playstation</a>
+                <a href="{% url 'products' %}?category=X_game,P_game,N_game" class="dropdown-item">All Games</a>
             </div>
         </li>
 
@@ -32,10 +32,10 @@
                 Consoles
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="consoles-link">
-                <a href="" class="dropdown-item">Nintendo</a>
-                <a href="" class="dropdown-item">Xbox</a>
-                <a href="" class="dropdown-item">Playstation</a>
-                <a href="" class="dropdown-item">All Consoles</a>
+                <a href="{% url 'products' %}?category=N_console" class="dropdown-item">Nintendo</a>
+                <a href="{% url 'products' %}?category=X_console" class="dropdown-item">Xbox</a>
+                <a href="{% url 'products' %}?category=P_console" class="dropdown-item">Playstation</a>
+                <a href="{% url 'products' %}?category=N_console,X_console,P_console" class="dropdown-item">All Consoles</a>
             </div>
         </li>
         
@@ -45,10 +45,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=Latest" class="dropdown-item">Latest</a>
+                <a href="{% url 'products' %}?category=Deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=Clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=All specials" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
