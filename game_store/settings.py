@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'products',
     'bag',
+    'checkout',
 ]
 
 SITE_ID = 1
