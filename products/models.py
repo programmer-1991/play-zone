@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Category(models.Model):
@@ -29,3 +30,41 @@ class Product(models.Model):
 
     def get_price(self):
         return self.price + "€"
+
+class Platform(models.Model):
+    name = models.CharField(max_length=64, unique=True)    
+    def __str__(self):
+        return self.name
+    
+
+class Game(models.Model):
+    title = models.CharField(max_length=254, unique=True)
+    slug = models.SlugField(max_length=254, null=True)
+    genre = models.CharField(max_length=64)
+    platform = models.ForeignKey(Platform, null=True, on_delete=models.SET_NULL)
+    age_rating = models.IntegerField(null=True)
+    developer = models.CharField(max_length=32)
+    publisher = models.CharField(max_length=32)
+    release = models.DateField()
+    cover = CloudinaryField('image', default='placeholder')
+
+    def __str__(self):
+        return f"{self.title}"
+
+class Console(models.Model):
+    title = models.CharField(max_length=254, unique=True)
+    slug = models.SlugField(max_length=254, unique=True)
+    developer = models.CharField(max_length=32, null=True)
+    release = models.DateField()
+    manufacturer = models.CharField(max_length=32, null=True)
+    platform = models.ForeignKey(Platform, null=True, on_delete=models.SET_NULL)
+    processor = models.CharField(max_length=254, null=True)
+    graphics = models.CharField(max_length=254, null=True)
+    memory = models.CharField(max_length=254, null=True)
+    storage = models.CharField(max_length=254, null=True)
+    sound = models.CharField(max_length=254, null=True)
+    mass = models.CharField(max_length=254, null=True)
+    cover = CloudinaryField('image', default='placeholder')
+
+    def __str__(self):
+        return f"{self.title}"
