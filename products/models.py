@@ -58,8 +58,8 @@ class Console(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    game = models.OneToOneField(Game,on_delete=models.CASCADE, related_name="product", null=True)    
-    console = models.OneToOneField(Console,on_delete=models.CASCADE, related_name="product", null=True)    
+    game = models.OneToOneField(Game,on_delete=models.CASCADE, related_name="product", null=True, blank=True)    
+    console = models.OneToOneField(Console,on_delete=models.CASCADE, related_name="product", null=True, blank=True)    
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()

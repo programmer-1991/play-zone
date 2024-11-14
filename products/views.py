@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Game, Console, Platform
-from .forms import ProductForm
+from .forms import ProductForm, GameForm
 
 # Create your views here.
 
@@ -74,9 +74,9 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -88,6 +88,28 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+
+def add_game(request):
+    """ Add a game details """
+    if request.method == 'POST':
+        form = GameForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added game details!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add a game. Please ensure the form is valid.')
+    else:
+        form = GameForm()
+        
+    template = 'products/add_game.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
 
 def edit_product(request, product_id):
     """ Edit a product in the store """
@@ -112,9 +134,45 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+def edit_game(request, game_id):
+    """ Edit a product in the store """
+    game = get_object_or_404(Game, pk=game_id)
+    product = game.product
+    if request.method == 'POST':
+        form = GameForm(request.POST, instance=game)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated game!')
+            if(product):
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to update game. Please ensure the form is valid.')
+    else:
+        form = GameForm(instance=game)
+        messages.info(request, f'You are editing {game.title}')
+
+    template = 'products/edit_game.html'
+    context = {
+        'form': form,
+        'game': game,
+    }
+
+    return render(request, template, context)
+
+
 def delete_product(request, product_id):
     """ Delete a product from the store """
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
+
+
+def delete_game(request, game_id):
+    """ Delete a product from the store """
+    game = get_object_or_404(Game, pk=game_id)
+    game.delete()
+    messages.success(request, 'Game deleted!')
     return redirect(reverse('products'))

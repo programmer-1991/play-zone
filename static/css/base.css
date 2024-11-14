@@ -7,6 +7,14 @@ body {
     color: #555;
     font-family: 'Lato';
 }
+/*details table*/
+dt {
+    width: max-content;
+}
+
+.details {
+    max-width: max-content;
+}
 
 /* from Bulma */
 .icon {
@@ -65,7 +73,7 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/* ------------------------------- bootstrap toasts */
+/*bootstrap toasts*/
 
 .message-container {
     position: fixed;
