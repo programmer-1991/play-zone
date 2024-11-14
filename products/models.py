@@ -31,7 +31,6 @@ class Game(models.Model):
     developer = models.CharField(max_length=32)
     publisher = models.CharField(max_length=32)
     release = models.DateField()
-    cover = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
         return f"{self.title}"
@@ -50,7 +49,6 @@ class Console(models.Model):
     storage = models.CharField(max_length=254, null=True)
     sound = models.CharField(max_length=254, null=True)
     mass = models.CharField(max_length=254, null=True)
-    cover = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
         return f"{self.title}"
@@ -66,7 +64,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    cover = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
         return self.name
