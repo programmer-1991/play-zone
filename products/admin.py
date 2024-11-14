@@ -14,23 +14,30 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
+
 class GameAdmin(admin.ModelAdmin):
         list_display = (
         'title',
         'platform',
         'release',
     )
+
+
 class ConsoleAdmin(admin.ModelAdmin):
         list_display = (
         'title',
         'platform',
         'release',
     )
+
+        
 class PlatformAdmin(admin.ModelAdmin):
         list_display = (
         'name',
