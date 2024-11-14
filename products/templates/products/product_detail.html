@@ -129,6 +129,53 @@
         </div>
     </div>
     {% endif %}
+
+    {%if console %}
+    <div class="container position-relative">
+        <div class="row d-flex align-items-start justify-content-center">
+            <div class="col details card cell border-5 bg-light my-4">
+                <div class="row card-body details">
+                    <div class="col cell">
+                        <h3 class="text-center">{{ console.title }}</h3>
+                        <div class="text-center">
+                            {% if user.is_superuser %}
+                            <a href="">Edit</a> |
+                            <a class="text-danger" href="">Delete</a>
+                            {% endif %}
+                        </div>
+                        <dl class="mt-3 row justify-content-center p-4">
+                            <div class="col">
+                                <dt>Developed by</dt>
+                                <dd id="developer">{{ console.developer }}</dd>
+                                <dt>Manufactured by</dt>
+                                <dd id="publisher">{{ console.manufacturer}}</dd>
+                                <dt>Platform</dt>
+                                <dd id="platform">{{ console.platform }}</dd>
+                                <dt>Memory</dt>
+                                <dd id="age">{{ console.memory}}</dd>
+                                <dt>Storage</dt>
+                                <dd id="age">{{ console.storage}}</dd>
+                            </div>
+                            <div class="col">
+                                <dt>Processor</dt>
+                                <dd id="genre">{{ console.processor }}</dd>
+                                <dt>Release date</dt>
+                                <dd id="release">{{ console.release }}</dd>
+                                <dt>Graphics</dt>
+                                <dd id="age">{{ console.graphics}}</dd>
+                                <dt>Sound</dt>
+                                <dd id="age">{{ console.sound}}</dd>
+                                <dt>Mass</dt>
+                                <dd id="age">{{ console.mass}}</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
     {% if user.is_superuser %}
     <!-- Update details -->
     {% load crispy_forms_tags %}

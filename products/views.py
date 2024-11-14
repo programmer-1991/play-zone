@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Game, Console, Platform
-from .forms import ProductForm, GameForm
+from .forms import ProductForm, GameForm, ConsoleForm
 
 # Create your views here.
 
@@ -104,6 +104,27 @@ def add_game(request):
         form = GameForm()
         
     template = 'products/add_game.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def add_console(request):
+    """ Add a console details """
+    if request.method == 'POST':
+        form = ConsoleForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added console details!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add a console. Please ensure the form is valid.')
+    else:
+        form = ConsoleForm()
+        
+    template = 'products/add_console.html'
     context = {
         'form': form,
     }
