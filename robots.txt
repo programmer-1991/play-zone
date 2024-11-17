@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: 
+Sitemap: https://flnaj3712-play-zone-00bb371eaa1c.herokuapp.com/sitemap.xml
