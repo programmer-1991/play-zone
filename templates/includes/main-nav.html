@@ -35,13 +35,18 @@
                 <a href="{% url 'products' %}?category=N_console" class="dropdown-item">Nintendo</a>
                 <a href="{% url 'products' %}?category=X_console" class="dropdown-item">Xbox</a>
                 <a href="{% url 'products' %}?category=P_console" class="dropdown-item">Playstation</a>
-                <a href="{% url 'products' %}?category=N_console,X_console,P_console" class="dropdown-item">All Consoles</a>
+                <a href="{% url 'products' %}?category=N_console,X_console,P_console" class="dropdown-item">All
+                    Consoles</a>
             </div>
         </li>
-        
+
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-dark mr-5" aria-current="page"
                 href="https://flnaj570-gamers-digest-24a9c682020c.herokuapp.com/">News</a>
+        </li>
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-dark mr-5" aria-current="page"
+                href="{% url 'message' %}">Contact Us</a>
         </li>
     </ul>
 </div>
