@@ -90,6 +90,53 @@ PlayZone is an online game store that offers a wide range of game genres and pla
 - Send a message via contact form(SHOULD HAVE)
 - Manage content items(WON'T HAVE)
 
+## Database
+### Database schema diagram(drawsql)
+### Database schema Summary
+
+## Design
+### Color
+### Typography
+### Layout
+### Wireframes
+
+## Features
+### Existing featurers
+### Addtional features to implement
+
+## Testing
+### Code validation
+#### Html validation
+#### Css validation
+#### Javascript validation
+#### Python validation
+
+### Manual testing
+#### Security testing
+#### testing user stories
+#### Element testing
+
+### Responsivenss
+
+## Technologies used
+### Languages
+### Frameworks
+### Installed packages
+### Other technologies
+
+## Bugs
+### Solved bugs
+### Unsolved bugs
+
+## Web Marketing
+### Business model
+### Marketing strategy
+
+## Search Engine Optimization
+### Keywords
+### Robots.txt
+### Sitemap.xml
+
 ## Deployment
 
 **Create a new project:**
@@ -206,3 +253,6 @@ When you create a repository on GitHub.com, it exists as a remote repository. Yo
 - Open your code editor or terminal and navigate to the directory where you want to clone the repository.
 - Run `git clone` followed by the copied URL.
 - Press enter, and Git will clone the repository to your local machine.
+
+
+## Credits
