@@ -183,6 +183,34 @@ def edit_game(request, game_id):
     return render(request, template, context)
 
 
+def edit_console(request, console_id):
+    """ Edit a product in the store """
+    console = get_object_or_404(Console, pk=console_id)
+    product = console.product
+    if request.method == 'POST':
+        form = ConsoleForm(request.POST, instance=console)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated console!')
+            if(product):
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to update console. Please ensure the form is valid.')
+    else:
+        form = ConsoleForm(instance=console)
+        messages.info(request, f'You are editing {console.title}')
+
+    template = 'products/edit_console.html'
+    context = {
+        'form': form,
+        'console': console,
+    }
+
+    return render(request, template, context)
+
+
 def delete_product(request, product_id):
     """ Delete a product from the store """
     product = get_object_or_404(Product, pk=product_id)
@@ -194,6 +222,15 @@ def delete_product(request, product_id):
 def delete_game(request, game_id):
     """ Delete a product from the store """
     game = get_object_or_404(Game, pk=game_id)
+    product = game.product
     game.delete()
     messages.success(request, 'Game deleted!')
-    return redirect(reverse('products'))
+    return redirect(reverse('product_detail', args=[product.id]))
+
+def delete_console(request, console_id):
+    """ Delete a product from the store """
+    console = get_object_or_404(Console, pk=console_id)
+    product = console.product
+    console.delete()
+    messages.success(request, 'Console deleted!')
+    return redirect(reverse('product_detail', args=[product.id]))
