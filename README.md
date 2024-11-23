@@ -1,6 +1,6 @@
 # PlayZone 
 
-PlayZone is an online game store that offers a wide range of game genres and platforms, as well as game consoles. Our store ensures a smooth shopping experience with secure checkout, fast shipping, and special offers. It caters to gamers interested in the console gaming experience and want to stay updated with the latest games and consoles in the gaming industry. Additionally, our website features a section for upcoming games and consoles to keep you informed and prepared for new releases, and our content is updated regularly with what's in the gaming market. PlayZone is where your gaming journey begins and evolves – play more, pay less! 
+PlayZone is an online game store that offers a wide range of game genres and platforms, as well as game consoles. Our store ensures a smooth shopping experience with secure checkout, fast shipping, and special offers. It caters to gamers interested in the console gaming experience and want to stay updated with the latest games and consoles in the gaming industry. Additionally, our website features a section for upcoming games and consoles to keep you informed and prepared for new releases, and our content is updated regularly with what's in the gaming market. PlayZone is where your gaming journey begins and evolves – play more, pay less!
 
 ## Project goals
 - __User goals__
@@ -91,8 +91,54 @@ PlayZone is an online game store that offers a wide range of game genres and pla
 - Manage content items(WON'T HAVE)
 
 ## Database
-### Database schema diagram(drawsql)
+### Database schema diagram
+
+When creating the database structure schema for this project, I utilized the [drawsql.app](https://drawsql.app/) website. This online tool allowed me to visually design and document the database schema, making it easier to plan and implement the database for my e-commerce web application.
+<center>
+
+![Database Schema image](./ERD.png)
+
+</center>
+
 ### Database schema Summary
+
+### `User` Table
+- Represents the basic user information according to Django's built-in User model.
+- Fields: `user_id`, `username`, `email`, `password`.
+
+### `Category` Table
+- Stores the different categories that the superuser can select when creating a product.
+- Fields: `category_id`, `name`, `friendly_name`.
+
+### `Product` Table
+- Stores products created by the superuser.
+- Fields: `category`, `game`, `console`, `sku`, `name`, `description`, `price`, `rating`, `image_url`, `cover`.     
+
+### `Platform` Table
+- Stores the different platforms that the superuser can select when creating a game or a console.
+- Fields: `platform_id`, `platform_name`.
+
+### `Game` Table
+- Stores game details created by the superuser for each game product.
+- Fields: `game_id`, `title`, `slug`, `genre`, `description`, `platform`, `age_rating`, `developer`, `publisher`, `release`.
+
+### `Console` Table
+- Stores console specifications created by the superuser for each console product.
+- Fields: `console_id`, `title`, `slug`, `developer`, `release`, `manufacturer`, `platform`, `processor`, `graphics`, `memory`, `storage`, `sound`, `mass`.            
+
+### `Contact` Table
+- Stores user information and message sent by the user to the administrator.
+- Fields: `contact_id`, `name`, `email`, `phone`, `topic`, `message`, `upload `.
+
+### `Order` Table
+- Stores order information and details provided by the shopper.
+- Fields: `order_number`, `full_name`, `email`, `phone_number`,`country`, `postcode`, `town_or_city`, `street_address1`,`street_address2`, `county`, `delivery_cost`, `order_total`,`grand_total`, `original_bag`, `stripe_pid`.
+
+### `OrderLineItem` Table
+- Stores information about a purchased product by the shopper.
+- Fields:`order`, `product`, `quantity`, `lineitem_total`.
+
+This database schema lays out the structure for the Play Zone application, giving an opportunity for gamers to easily keep updated with the latest games and consoles in the gaming industry.
 
 ## Design
 ### Color
