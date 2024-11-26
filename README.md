@@ -147,7 +147,120 @@ This database schema lays out the structure for the Play Zone application, givin
 ### Wireframes
 
 ## Features
-### Existing featurers
+### Existing features
+
+- **Landing page**
+  - This page contains an advertisement message to attract customers and a call to action button `SHOP NOW` that takes the customer to all products list.
+
+- **logo**
+  - The logo is the store name and when clicked it takes you back to the landing page.
+
+- **Navbar**
+  - The navigation bar is visible on all pages and it contains links to all products lists in the site, a link to the store's official news site and a link to the contact us page.
+
+- **View a list of products**
+  - The customer can view a list a products. Each product card contains a picture, product name, price, category name and rating. 
+
+- **Search for a product**
+  - The shopper has access to a search bar to find any available products as long as the searched words match a word from the product name or description.
+
+- **Sort products**
+  - In the nav bar the shopper has access to a dropdown menu to sort all products by price, category and rating.
+
+- **Filter products**
+  - In the nav bar menu the shopper has access to two different drop down menu to filter both games and consoles based on brands (Xbox, Playstation and Nintendo)
+
+- **Sort all products lists**
+  - In all products lists both sorted and filtered, the shopper has access to a sorting list menu to sort lists by price(both directions), rating(both directions), name(alphabetically) and category(alphabetically).
+
+- **View product details**
+  - This page views the product image, name, price, rating, category name and description.
+  - **View game details**: Below the product information, the shopper can view game details to read in case the product is a game.
+  - **View console specs**: Below the product information, the shopper can view console specs to read in case the product is a console.
+
+- **Modify quantity of product**
+  - in the product details page the shopper has access to an input box to enter manually the quantity of the desired product. The shopper can also modify the quantity by using `+` and `-` buttons. 
+  
+- **Add item to bag**
+  - From the post details page, the shopper has access to a button when clicked the product is added to the shopping bag, and a window to the top right corner will show and confirm this.
+
+- **Shopping bag**
+  - The shopping bag page is where the shopper can view items that were added to the bag. An order summary that provides information about each product: an image, product name, SKU number, price, quantity, the subtotal for each product and the total price of all products in the list. The shopper can modify the amount of each product or delete the product from the list. The page gives access to a `secure checkout` button to go to the next step.
+
+- **Checkout**
+  - In the checkout page, the shopper can view an order summary as previously named and have access to a form Where personal details, delivery and payment information can be filled in. Then the shopper can choose between going a step back to modify bag items or gå forward and complete the order.
+
+- **Order confirmation**
+  - After the order is completed and payment is successful, the shopper receives an order confirmation, which is also sent as an email confirmation. The shopper can be redirected to products list page using a button.
+
+- **Add a product**
+  - Admin have access to form in the website to create a new product. The added product will be seen in the products list page.
+
+- **Update a product**
+  - Admin can update a product from the products list page or product details page by accessing an `update` button. After update, the page will be redirected to the product details.
+
+- **Delete a product**
+  - Admin can delete a product from the products list page or product details page by accessing a `delete` button. After deletion, the page will be redirected to the products list.
+
+- **Add game details**
+  - Admin has access to form in the website to create a new game details that coordinates with the game product. The added game details will be seen in the product details page.
+
+- **Update game details**
+  - Admin can update game details for a game product from the product details page by accessing an `update` button in the game details card. After the update, Admin will be redirected the product details.
+ 
+- **Delete game details**
+  - Admin can delete game details for a game product from the product details page by accessing a `delete` button in the game details card. After the deletion, Admin will be redirected to the product details page with only product information.
+
+- **Add console specs**
+  - Admin has access to form in the website to create a new console specs that coordinates with the console product. The added console specs will be seen in the product details page.
+
+- **Update console specs**
+  - Admin can update console specs for a console product from the product details page by accessing an `update` button in the console specs card. After the update, Admin will be redirected the product details with only product information.
+
+- **Delete console specs**
+  - Admin can delete console specs for a console product from the product details page by accessing a `delete` button in the console specs card. After the deletion, Admin will be redirected to the product details page with only product information.
+
+- **Contact us page**
+  - Shoppers have access to a contact form where they can reach the administrator by leaving personal details and a message and choosing a topic.
+
+- **Register an account**
+  - Shoppers have access to a form so that they can register an account
+
+  ![Register page](./sign-up.png)
+
+- **log in an account**
+  - Shoppers have access to a form so that they can log in to an accounts
+
+  ![Log in page](./sign-in.png)
+
+- **log out of an account**
+  - Shoppers can log out of an account
+
+  ![Log out page](./sign-out.png)
+
+- **Newsletter: Mailchimp Integration**
+  - The website integrates with Mailchimp, allowing users to subscribe to the newsletter. Users can fill in their email address, and a confirmation message will appear to acknowledge their subscription.
+
+- **External links**
+  - Linkedin link that takes the visitor to linkedin official site
+  - Github link that takes the visitor to the project repository in github
+
+- **messages**
+  - The shopper can view a confirmation toast message when registering an account, loging in, loging out, adding items to bag and successful checkout.
+  - Admin can view a confirmation toast message when adding product or game details or console specs, updating product or game details or console specs and deleting product or game details or console specs.
+
+- **Error Pages**
+  - The site contains custom error page for 404 errors.
+
+  ![404 error page](./404.png)
+
+### Privacy Policy
+- I generated it using [TermsFeed](https://www.termsfeed.com/privacy-policy-generator/ ). Not added to the website yet.
+
+- **About us page**
+  - This is not added yet. 
+
+
 ### Addtional features to implement
 
 ## Testing

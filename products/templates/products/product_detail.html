@@ -96,15 +96,15 @@
     <div class="container position-relative">
         <div class="row d-flex align-items-start justify-content-center">
             <div class="col details card cell border-5 bg-light my-4">
+                <h2 class="text-center"><strong>Game</strong> Details</h2>
+                <div class="text-center">
+                    {% if user.is_superuser %}
+                    <a href="{% url 'edit_game' game.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_game' game.id %}">Delete</a>
+                    {% endif %}
+                </div>
                 <div class="row card-body details p-4">
                     <div class="col cell">
-                        <h3 class="text-center">Game Details</h3>
-                        <div class="text-center">
-                            {% if user.is_superuser %}
-                            <a href="{% url 'edit_game' game.id %}">Edit</a> |
-                            <a class="text-danger" href="{% url 'delete_game' game.id %}">Delete</a>
-                            {% endif %}
-                        </div>
                         <h4 class="text-center">{{ game.title }}</h4>
                         <dl class="mt-3 row justify-content-center py-0 px-4">
                             <div class="col">
@@ -135,15 +135,16 @@
     <div class="container position-relative">
         <div class="row d-flex align-items-start justify-content-center">
             <div class="col details card cell border-5 bg-light my-4">
-                <div class="row card-body details p-4">
-                    <div class="col cell">
-                        <h3 class="text-center">{{ console.title }}|Console Specs</h3>
+                <h2 class="text-center m-0 mt-2"><strong>Console</strong> Specs</h2>
+                <div class="row card-body details p-0">
+                    <div class="col cell p-0">
                         <div class="text-center">
                             {% if user.is_superuser %}
                             <a href="{% url 'edit_console' console.id %}">Edit</a> |
                             <a class="text-danger" href="{% url 'delete_console' console.id %}">Delete</a>
                             {% endif %}
                         </div>
+                        <h4 class="text-center mt-3">{{ console.title }}</h4>
                         <dl class="mt-3 row justify-content-center py-0 px-4">
                             <div class="col">
                                 <dt>Developed by</dt>
