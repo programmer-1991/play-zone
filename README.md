@@ -274,6 +274,7 @@ This database schema lays out the structure for the Play Zone application, givin
 #### Security testing
 #### testing user stories
 #### Element testing
+- Clicked game and console external links. The result: Opens in a new tab. PASS 
 
 ### Responsivenss
 
