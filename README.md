@@ -255,7 +255,7 @@ This database schema lays out the structure for the Play Zone application, givin
   ![404 error page](./404.png)
 
 ### Privacy Policy
-- I generated it using [TermsFeed](https://www.termsfeed.com/privacy-policy-generator/ ). Not added to the website yet.
+  - I generated it using [TermsFeed](https://www.termsfeed.com/privacy-policy-generator/ ). Not added to the website yet.
 
 - **About us page**
   - This is not added yet. 
@@ -292,9 +292,60 @@ This database schema lays out the structure for the Play Zone application, givin
 ### Marketing strategy
 
 ## Search Engine Optimization
+SEO and Content Strategy: We aim to find and target important search terms related to our variety of latest gaming platforms and products using technologies like WordTracker and Google Trends.
+
 ### Keywords
+Keywords is a fundamental key for our website to be ranked highly by google search. Keywords are a combination of short tail and long tail keywords.
+
+- **Short tail keywords**
+  - `Xbox series X games`
+  - `Xbox series S games`
+  - `PS5 games`
+  - `Nintendo switch games`
+  - `Latest games`
+  - `Latest consoles`
+  - `Xbox games`
+  - `Playstation games`
+  - `Nintendo games`
+  - `Xbox consoles`
+  - `Playstation consoles`
+  - `Nintendo consoles`
+  - `buy latest games`
+  - `buy latest consoles`
+  - `game store`
+
+- **Long tail keywords**
+  - `Buy PS5 games online`
+  - `Buy Xbox series games online`
+  - `Buy Nintendo Switch games online`
+  - `Affordable Xbox Series X consoles`
+  - `Best Nintendo Switch games for families`
+  - `Newest video games for PS5`
+  - `The best of latest gen games`
+  - `The best of latest gen consoles`
+  - `Top-rated Xbox Series X games`
+  - `Where to buy gaming consoles online`
+  - `New Nintendo Switch releases online`
+  - `Latest Xbox Series X games`
+  - `Game store that sells games and consoles`
+  - `Good ideas for gifts to gamers`
+
 ### Robots.txt
+- The robots.txt file was created and uploaded to the root directory of the site. This file tells search engines where they are not allowed to go on our website. The existence of this file is a sign of quality and therefore it improves SEO ranking.
+
 ### Sitemap.xml
+- Sitemap was generated using [XML sitemaps](https://www.xml-sitemaps.com/) and uploaded to the root directory. This file lists a website’s  
+important page urls, making sure that search engines can navigate through them. It also helps search engines understand your website structure.
+
+### Content
+- I used semantic elements in my project to keep a structure that is customized for SEO.
+- I used keywords in headings and put them in strong tags to emphasize it's importance. 
+- The project has internal links that leads to all pages to help users to continue exploring my site.
+- I used external links for each product either a game or console that provides more information about the product and they link to official sites for Sony Playstation, Microsoft Xbox and Nintendo.
+
+### Page titles
+- For the home page i chose a document title that indicates the domain name and whay kind of products users will expect, The title is also customized to keywords for SEO purposes.
+- I used different document titles when filtering games and consoles. 
 
 ## Deployment
 

@@ -16,7 +16,7 @@ class Category(models.Model):
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.friendly_name
 
     def get_friendly_name(self):
         return self.friendly_name
@@ -31,7 +31,7 @@ class Game(models.Model):
     developer = models.CharField(max_length=32)
     publisher = models.CharField(max_length=32)
     release = models.DateField()
-
+    info = models.URLField(max_length = 254, null=True, blank=True)
     def __str__(self):
         return f"{self.title}"
 
@@ -49,7 +49,8 @@ class Console(models.Model):
     storage = models.CharField(max_length=254, null=True)
     sound = models.CharField(max_length=254, null=True)
     mass = models.CharField(max_length=254, null=True)
-
+    info = models.URLField(max_length = 254, null=True, blank=True)
+    
     def __str__(self):
         return f"{self.title}"
 
