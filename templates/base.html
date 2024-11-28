@@ -141,7 +141,7 @@
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="my-auto py-1 py-md-0 text-center text-md-left d-none d-sm-block">
+                <div class="my-auto py-1 py-md-0 text-center text-md-left d-none d-sm-block d-md-none">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-black my-0"><strong>Play</strong>Zone</h2>
                     </a>
@@ -178,6 +178,11 @@
     {% endif %}
 
     {% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
     {% endblock %}
 
     {% block content %}
