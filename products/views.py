@@ -110,7 +110,6 @@ def edit_product(request, product_id):
     else:
         form = ProductForm()
 
-        
     template = 'products/edit_product.html'
     context = {
         'form': form,
@@ -128,18 +127,21 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-def add_game(request, user):
+def add_game(request):
     """ Add a game details """
-    if request.method == 'POST':
-        form = GameForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added game details!')
-            return redirect(reverse('add_product'))
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            form = GameForm(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully added game details!')
+                return redirect(reverse('add_product'))
+            else:
+                 messages.error(request, 'Failed to add a game. Please ensure the form is valid.')
         else:
-            messages.error(request, 'Failed to add a game. Please ensure the form is valid.')
+            form = GameForm()
     else:
-        form = GameForm()
+        form = ""
         
     template = 'products/add_game.html'
     context = {
@@ -152,21 +154,24 @@ def edit_game(request, game_id):
     """ Edit a product in the store """
     game = get_object_or_404(Game, pk=game_id)
     product = game.product
-    if request.method == 'POST':
-        form = GameForm(request.POST, instance=game)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated game!')
-            if(product):
-                return redirect(reverse('product_detail', args=[product.id]))
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            form = GameForm(request.POST, instance=game)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully updated game!')
+                if(product):
+                    return redirect(reverse('product_detail', args=[product.id]))
+                else:
+                    return redirect(reverse('add_product'))
             else:
-                return redirect(reverse('add_product'))
+                messages.error(request, 'Failed to update game. Please ensure the form is valid.')
         else:
-            messages.error(request, 'Failed to update game. Please ensure the form is valid.')
+            form = GameForm(instance=game)
+            messages.info(request, f'You are editing {game.title}')
     else:
-        form = GameForm(instance=game)
-        messages.info(request, f'You are editing {game.title}')
-
+        form = ""
+    
     template = 'products/edit_game.html'
     context = {
         'form': form,
@@ -179,8 +184,9 @@ def delete_game(request, game_id):
     """ Delete a product from the store """
     game = get_object_or_404(Game, pk=game_id)
     product = game.product
-    game.delete()
-    messages.success(request, 'Game deleted!')
+    if request.user.is_superuser:
+        game.delete()
+        messages.success(request, 'Game deleted!')
     return redirect(reverse('product_detail', args=[product.id]))
 
 
