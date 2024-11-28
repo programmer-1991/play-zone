@@ -272,6 +272,20 @@ This database schema lays out the structure for the Play Zone application, givin
 
 ### Manual testing
 #### Security testing
+
+Ensuring that users cannot access or modify content created by the superuser is crucial for maintaining the integrity and security of the application. The table demonstrates the application's robustness in handling unauthorized access attempts, ensuring user data security and integrity.
+
+The following tests were conducted to verify that unauthorized access attempts are properly handled.
+
+| Test Case | Description | Method | Expected Outcome | Actual Outcome | Result |
+| --------- | ----------- | ------ | ---------------- | -------------- | --------- |
+| Create Post Unauthorized Access | Non-admin attempting to create a product | Manual URL manipulation | The product creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Create Game Unauthorized Access | Non-admin attempting to create a game | Manual URL manipulation | The game-post creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Edit Post Unauthorized Access | Non-admin attempting to edit a post | Manual URL manipulation | The adress non-functional | Redirect to post details page | ✅ | 
+| Delete Post Unauthorized Access | Non-admin attempting to delete a post | Manual URL manipulation | The adress non-functional | Redirect to game list page | ✅ |
+| Edit Game Unauthorized Access | Non-admin attempting to edit a game |  Manual URL manipulation | The adress non-functional | Redirect to game details page | ✅ |
+| Delete Game Unauthorized Access | Non-admin attempting to delete a post | Manual URL manipulation | The adress non-functional | Redirect to game list page | ✅ |
+
 #### testing user stories
 #### Element testing
 - Clicked game and console external links. The result: Opens in a new tab. PASS 
@@ -455,7 +469,7 @@ By forking the GitHub Repository, you can create a copy of the original reposito
 - At the top right of the repository page, click "Fork" to create a copy in your own GitHub repository.
 ---
 
-**Clone the Repository:**
+### Clone the Repository:
 When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations. Creating a clone allows you to have a local copy of the project. Follow these steps:
 
 - Navigate to https://github.com/programmer-1991/play-zone
