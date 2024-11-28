@@ -1,9 +1,9 @@
-<ul class="d-flex flex-nowrap m-0 p-0">
+<ul class="d-flex flex-nowrap m-0 p-0 d-md-none">
     <li class="list-inline-item">
-        <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
+        <a class="text-black nav-link d-block" href="#" id="mobile-search" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-                <div><i class="fas fa-search fa-lg"></i></div>
+                <div><i class="fas fa-search fa-md"></i></div>
                 <p class="my-0">Search</p>
             </div>
         </a>
@@ -25,11 +25,11 @@
         </div>
     </li>
     <li class="list-inline-item dropdown">
-        <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
+        <a class="text-black nav-link d-block" href="#" id="user-options" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
+                <div><i class="fas fa-user fa-md"></i></div>
+                <p class="my-0">Account</p>
             </div>
         </a>
         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -48,10 +48,10 @@
         </div>
     </li>
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
+        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block"
             href="{% url 'view_bag' %}">
             <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <div><i class="fas fa-shopping-bag fa-md"></i></div>
                 <p class="my-0">
                     {% if grand_total %}
                     €{{ grand_total|floatformat:2 }}
