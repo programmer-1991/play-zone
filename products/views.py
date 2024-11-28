@@ -73,14 +73,15 @@ def product_detail(request, product_id):
 
 def add_product(request):
     """ Add a product to the store """
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = form.save()
-            messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            form = ProductForm(request.POST, request.FILES)
+            if form.is_valid():
+                product = form.save()
+                messages.success(request, 'Successfully added product!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
         
@@ -91,8 +92,43 @@ def add_product(request):
 
     return render(request, template, context)
 
+def edit_product(request, product_id):
+    """ Edit a product in the store """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            form = ProductForm(request.POST, request.FILES, instance=product)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully updated product!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+        else:
+            form = ProductForm(instance=product)
+            messages.info(request, f'You are editing {product.name}')
+    else:
+        form = ProductForm()
 
-def add_game(request):
+        
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+    if request.user.is_superuser:
+        product = get_object_or_404(Product, pk=product_id)
+        product.delete()
+        messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
+
+
+def add_game(request, user):
     """ Add a game details """
     if request.method == 'POST':
         form = GameForm(request.POST)
@@ -108,51 +144,6 @@ def add_game(request):
     template = 'products/add_game.html'
     context = {
         'form': form,
-    }
-
-    return render(request, template, context)
-
-
-def add_console(request):
-    """ Add a console details """
-    if request.method == 'POST':
-        form = ConsoleForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added console details!')
-            return redirect(reverse('add_product'))
-        else:
-            messages.error(request, 'Failed to add a console. Please ensure the form is valid.')
-    else:
-        form = ConsoleForm()
-        
-    template = 'products/add_console.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
-
-
-def edit_product(request, product_id):
-    """ Edit a product in the store """
-    product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
-    else:
-        form = ProductForm(instance=product)
-        messages.info(request, f'You are editing {product.name}')
-
-    template = 'products/edit_product.html'
-    context = {
-        'form': form,
-        'product': product,
     }
 
     return render(request, template, context)
@@ -184,6 +175,34 @@ def edit_game(request, game_id):
 
     return render(request, template, context)
 
+def delete_game(request, game_id):
+    """ Delete a product from the store """
+    game = get_object_or_404(Game, pk=game_id)
+    product = game.product
+    game.delete()
+    messages.success(request, 'Game deleted!')
+    return redirect(reverse('product_detail', args=[product.id]))
+
+
+def add_console(request):
+    """ Add a console details """
+    if request.method == 'POST':
+        form = ConsoleForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added console details!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add a console. Please ensure the form is valid.')
+    else:
+        form = ConsoleForm()
+        
+    template = 'products/add_console.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 def edit_console(request, console_id):
     """ Edit a product in the store """
@@ -211,23 +230,6 @@ def edit_console(request, console_id):
     }
 
     return render(request, template, context)
-
-
-def delete_product(request, product_id):
-    """ Delete a product from the store """
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
-
-
-def delete_game(request, game_id):
-    """ Delete a product from the store """
-    game = get_object_or_404(Game, pk=game_id)
-    product = game.product
-    game.delete()
-    messages.success(request, 'Game deleted!')
-    return redirect(reverse('product_detail', args=[product.id]))
 
 def delete_console(request, console_id):
     """ Delete a product from the store """

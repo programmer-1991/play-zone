@@ -279,12 +279,11 @@ The following tests were conducted to verify that unauthorized access attempts a
 
 | Test Case | Description | Method | Expected Outcome | Actual Outcome | Result |
 | --------- | ----------- | ------ | ---------------- | -------------- | --------- |
-| Create Post Unauthorized Access | Non-admin attempting to create a product | Manual URL manipulation | The product creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
-| Create Game Unauthorized Access | Non-admin attempting to create a game | Manual URL manipulation | The game-post creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
-| Edit Post Unauthorized Access | Non-admin attempting to edit a post | Manual URL manipulation | The adress non-functional | Redirect to post details page | ✅ | 
-| Delete Post Unauthorized Access | Non-admin attempting to delete a post | Manual URL manipulation | The adress non-functional | Redirect to game list page | ✅ |
-| Edit Game Unauthorized Access | Non-admin attempting to edit a game |  Manual URL manipulation | The adress non-functional | Redirect to game details page | ✅ |
-| Delete Game Unauthorized Access | Non-admin attempting to delete a post | Manual URL manipulation | The adress non-functional | Redirect to game list page | ✅ |
+| Create Product Unauthorized Access | Non-admin attempting to create a product | Manual URL manipulation | The product creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Edit Product Unauthorized Access | Non-admin attempting to edit a product | Manual URL manipulation | The edit form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Delete Product Unauthorized Access | Non-admin attempting to delete a product | Manual URL manipulation | The adress non-functional | Redirect to products list page | ✅ |
+|
+
 
 #### testing user stories
 #### Element testing
