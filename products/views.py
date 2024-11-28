@@ -192,17 +192,19 @@ def delete_game(request, game_id):
 
 def add_console(request):
     """ Add a console details """
-    if request.method == 'POST':
-        form = ConsoleForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added console details!')
-            return redirect(reverse('add_product'))
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            form = ConsoleForm(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully added console details!')
+                return redirect(reverse('add_product'))
+            else:
+                messages.error(request, 'Failed to add a console. Please ensure the form is valid.')
         else:
-            messages.error(request, 'Failed to add a console. Please ensure the form is valid.')
+            form = ConsoleForm()
     else:
-        form = ConsoleForm()
-        
+        form = ""    
     template = 'products/add_console.html'
     context = {
         'form': form,
@@ -214,21 +216,23 @@ def edit_console(request, console_id):
     """ Edit a product in the store """
     console = get_object_or_404(Console, pk=console_id)
     product = console.product
-    if request.method == 'POST':
-        form = ConsoleForm(request.POST, instance=console)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated console!')
-            if(product):
-                return redirect(reverse('product_detail', args=[product.id]))
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            form = ConsoleForm(request.POST, instance=console)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully updated console!')
+                if(product):
+                    return redirect(reverse('product_detail', args=[product.id]))
+                else:
+                    return redirect(reverse('add_product'))
             else:
-                return redirect(reverse('add_product'))
+                messages.error(request, 'Failed to update console. Please ensure the form is valid.')
         else:
-            messages.error(request, 'Failed to update console. Please ensure the form is valid.')
+            form = ConsoleForm(instance=console)
+            messages.info(request, f'You are editing {console.title}')
     else:
-        form = ConsoleForm(instance=console)
-        messages.info(request, f'You are editing {console.title}')
-
+        form = ""
     template = 'products/edit_console.html'
     context = {
         'form': form,
@@ -241,6 +245,7 @@ def delete_console(request, console_id):
     """ Delete a product from the store """
     console = get_object_or_404(Console, pk=console_id)
     product = console.product
-    console.delete()
-    messages.success(request, 'Console deleted!')
+    if request.user.is_superuser:
+        console.delete()
+        messages.success(request, 'Console deleted!')
     return redirect(reverse('product_detail', args=[product.id]))

@@ -285,6 +285,9 @@ The following tests were conducted to verify that unauthorized access attempts a
 | Create Game Unauthorized Access | Non-admin attempting to create a game | Manual URL manipulation | The game creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
 | Edit Game Unauthorized Access | Non-admin attempting to edit a game | Manual URL manipulation | The edit form is unavailable | A message tells this feature is only available to superusers | ✅ |
 | Delete Game Unauthorized Access | Non-admin attempting to delete a game | Manual URL manipulation | The adress non-functional | Redirect to the correspondent product details page | ✅ |
+| Create Console Unauthorized Access | Non-admin attempting to create a Console | Manual URL manipulation | The Console creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Edit Console Unauthorized Access | Non-admin attempting to edit a Console | Manual URL manipulation | The edit form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Delete Console Unauthorized Access | Non-admin attempting to delete a console | Manual URL manipulation | The adress non-functional | Redirect to the correspondent product details page | ✅ |
 |
 
 
