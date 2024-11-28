@@ -1,4 +1,4 @@
 from django import forms
 
-class DatePickerInput(forms.DateTimeInput):
+class DatePickerInput(forms.DateInput):
         input_type = 'date'
