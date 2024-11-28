@@ -59,7 +59,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     game = models.OneToOneField(Game,on_delete=models.SET_NULL, verbose_name="If Product is a Game", related_name="product", null=True, blank=True)    
     console = models.OneToOneField(Console, on_delete=models.SET_NULL, verbose_name="If Product is a Console", related_name="product", null=True, blank=True)    
-    sku = models.CharField(max_length=254, verbose_name="Stock Keeping Unit(SKU)", null=True, blank=True)
+    sku = models.CharField(max_length=254, verbose_name="Stock Keeping Unit (SKU)", null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
