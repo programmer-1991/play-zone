@@ -143,6 +143,10 @@ This database schema lays out the structure for the Play Zone application, givin
 ## Design
 ### Color
 ### Typography
+- Lato's readability and versatility are perhaps the main reasons it was chosen for 
+  the MarketFlex platform. Lato is appropriate for a variety of purposes since it strikes a balance between somber and amiable tones. For an e-commerce site where clear communication is essential, its well-structured characters improve readability.
+
+
 ### Layout
 ### Wireframes
 
@@ -226,17 +230,13 @@ This database schema lays out the structure for the Play Zone application, givin
 - **Register an account**
   - Shoppers have access to a form so that they can register an account
 
-  ![Register page]()
-
+ 
 - **log in an account**
   - Shoppers have access to a form so that they can log in to an accounts
 
-  ![Log in page]()
-
+ 
 - **log out of an account**
   - Shoppers can log out of an account
-
-  ![Log out page](./sign-out.png)
 
 - **Newsletter: Mailchimp Integration**
   - The website integrates with Mailchimp, allowing users to subscribe to the newsletter. Users can fill in their email address, and a confirmation message will appear to acknowledge their subscription.
@@ -251,15 +251,6 @@ This database schema lays out the structure for the Play Zone application, givin
 
 - **Error Pages**
   - The site contains custom error page for 404 errors.
-
-  ![404 error page](./404.png)
-
-### Privacy Policy
-  - I generated it using [TermsFeed](https://www.termsfeed.com/privacy-policy-generator/ ). Not added to the website yet.
-
-- **About us page**
-  - This is not added yet. 
-
 
 ### Addtional features to implement
 
