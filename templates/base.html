@@ -10,6 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Xbox series X games, Xbox series S games, PS5 games, Nintendo switch games,
+          Latest games, Latest consoles, Xbox games, Playstation games, Nintendo games, Xbox consoles, Playstation consoles,
+          Nintendo consoles, buy latest games, buy latest consoles, game store, Buy PS5 games online, Buy Xbox series games online,
+          Buy Nintendo Switch games online, Affordable Xbox Series X consoles, Best Nintendo Switch games for families, 
+          Newest video games for PS5, The best of latest gen games, The best of latest gen consoles, Top-rated Xbox Series X games, 
+          Where to buy gaming consoles online, New Nintendo Switch releases online,Latest Xbox Series X games,
+          Game store that sells games and consoles, Good ideas for gifts to gamers">
+    <meta name="description"
+        content="PlayZone is a game store that sells the latest gen of games and consoles like Xbox Series X, Playstation 5 and Nintendo Switch.">
     {% endblock %}
 
     {% block extra_meta %}
@@ -49,19 +58,19 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Play Zone {% block extra_title %}{% endblock %}</title>
+    <title>PLayZone - Game Store{% block extra_title %} | games for Xbox|Playstation|Nintendo{% endblock %}</title>
 </head>
 
 <body>
 
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div id="topnav" class="row bg-white pt-md-2 d-none d-md-flex">
+            <div class="col-12 col-md-4 my-auto py-1 py-md-0 text-center text-md-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Play</strong> Zone</h2>
+                    <h2 class="logo-font text-black my-0"><strong>Play</strong>Zone</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-md-4 my-auto py-1 py-md-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -76,14 +85,14 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <div class="col-12 col-md-4 my-auto py-1 py-md-0">
+                <ul class="list-inline list-unstyled text-center text-md-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <div><i class="fas fa-user fa-md"></i></div>
+                                <p class="my-0">Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -93,7 +102,6 @@
                             <a href="{% url 'add_game' %}" class="dropdown-item">Add a game</a>
                             <a href="{% url 'add_console' %}" class="dropdown-item">Add a console</a>
                             {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -105,7 +113,7 @@
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div><i class="fas fa-shopping-bag fa-md"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                     €{{ grand_total|floatformat:2 }}
@@ -119,20 +127,33 @@
                 </ul>
             </div>
         </div>
+        <div class="row d-flex justify-content-center bg-white d-sm-none">
+            <div class="my-auto py-1 py-md-0 text-center text-md-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-black my-0"><strong>Play</strong>Zone</h2>
+                </a>
+            </div>
+        </div>
         <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <nav class="navbar navbar-expand-md navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="my-auto py-1 py-md-0 text-center text-md-left d-none d-sm-block d-md-none">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h2 class="logo-font text-black my-0"><strong>Play</strong>Zone</h2>
+                    </a>
+                </div> 
                 {% include 'includes/mobile-top-header.html' %}
+   
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
 
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-dark text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
+                <h4 class="text-uppercase my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
             </div>
         </div>
     </header>
@@ -156,6 +177,11 @@
     {% endif %}
 
     {% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
     {% endblock %}
 
     {% block content %}
@@ -215,8 +241,10 @@
             </div>
             <div class="col-12">
                 <p class=" text-center text-white ">Follow us:
-                    <a href="https://github.com/programmer-1991/play-zone" target="blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/feed/" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/programmer-1991/play-zone" target="blank" rel="noopener"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/feed/" target="blank" rel="noopener"><i
+                            class="fa-brands fa-linkedin"></i></a>
                 </p>
             </div>
         </div>

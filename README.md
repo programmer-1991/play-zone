@@ -2,6 +2,8 @@
 
 PlayZone is an online game store that offers a wide range of game genres and platforms, as well as game consoles. Our store ensures a smooth shopping experience with secure checkout, fast shipping, and special offers. It caters to gamers interested in the console gaming experience and want to stay updated with the latest games and consoles in the gaming industry. Additionally, our website features a section for upcoming games and consoles to keep you informed and prepared for new releases, and our content is updated regularly with what's in the gaming market. PlayZone is where your gaming journey begins and evolves – play more, pay less!
 
+![responsive](./readme_images/responsive.png)
+
 ## Project goals
 - __User goals__
     - To keep updated with the latest games and consoles in the gaming industry
@@ -96,7 +98,7 @@ PlayZone is an online game store that offers a wide range of game genres and pla
 When creating the database structure schema for this project, I utilized the [drawsql.app](https://drawsql.app/) website. This online tool allowed me to visually design and document the database schema, making it easier to plan and implement the database for my e-commerce web application.
 <center>
 
-![Database Schema image](./ERD.png)
+![Database Schema image](./readme_images/drawSQL-image-export-2024-11-29.png)
 
 </center>
 
@@ -142,12 +144,117 @@ This database schema lays out the structure for the Play Zone application, givin
 
 ## Design
 ### Color
+- I used the same coulours used in the walkthrough project Boutique Ado.
 ### Typography
+
+- Lato's readability and versatility are perhaps the main reasons it was chosen for 
+  the MarketFlex platform. Lato is appropriate for a variety of purposes since it strikes a balance between somber and amiable tones. For an e-commerce site where clear communication is essential, its well-structured characters improve readability.
+
 ### Layout
 ### Wireframes
 
 ## Features
-### Existing featurers
+### Existing features
+
+- **Landing page**
+  - This page contains an advertisement message to attract customers and a call to action button `SHOP NOW` that takes the customer to all products list.
+
+- **logo**
+  - The logo is the store name and when clicked it takes you back to the landing page.
+
+- **Navbar**
+  - The navigation bar is visible on all pages and it contains links to all products lists in the site, a link to the store's official news site and a link to the contact us page.
+
+- **View a list of products**
+  - The customer can view a list a products. Each product card contains a picture, product name, price, category name and rating. 
+
+- **Search for a product**
+  - The shopper has access to a search bar to find any available products as long as the searched words match a word from the product name or description.
+
+- **Sort products**
+  - In the nav bar the shopper has access to a dropdown menu to sort all products by price, category and rating.
+
+- **Filter products**
+  - In the nav bar menu the shopper has access to two different drop down menu to filter both games and consoles based on brands (Xbox, Playstation and Nintendo)
+
+- **Sort all products lists**
+  - In all products lists both sorted and filtered, the shopper has access to a sorting list menu to sort lists by price(both directions), rating(both directions), name(alphabetically) and category(alphabetically).
+
+- **View product details**
+  - This page views the product image, name, price, rating, category name and description.
+  - **View game details**: Below the product information, the shopper can view game details to read in case the product is a game.
+  - **View console specs**: Below the product information, the shopper can view console specs to read in case the product is a console.
+
+- **Modify quantity of product**
+  - in the product details page the shopper has access to an input box to enter manually the quantity of the desired product. The shopper can also modify the quantity by using `+` and `-` buttons. 
+  
+- **Add item to bag**
+  - From the post details page, the shopper has access to a button when clicked the product is added to the shopping bag, and a window to the top right corner will show and confirm this.
+
+- **Shopping bag**
+  - The shopping bag page is where the shopper can view items that were added to the bag. An order summary that provides information about each product: an image, product name, SKU number, price, quantity, the subtotal for each product and the total price of all products in the list. The shopper can modify the amount of each product or delete the product from the list. The page gives access to a `secure checkout` button to go to the next step.
+
+- **Checkout**
+  - In the checkout page, the shopper can view an order summary as previously named and have access to a form Where personal details, delivery and payment information can be filled in. Then the shopper can choose between going a step back to modify bag items or gå forward and complete the order.
+
+- **Order confirmation**
+  - After the order is completed and payment is successful, the shopper receives an order confirmation, which is also sent as an email confirmation. The shopper can be redirected to products list page using a button.
+
+- **Add a product**
+  - Admin have access to form in the website to create a new product. The added product will be seen in the products list page.
+
+- **Update a product**
+  - Admin can update a product from the products list page or product details page by accessing an `update` button. After update, the page will be redirected to the product details.
+
+- **Delete a product**
+  - Admin can delete a product from the products list page or product details page by accessing a `delete` button. After deletion, the page will be redirected to the products list.
+
+- **Add game details**
+  - Admin has access to form in the website to create a new game details that coordinates with the game product. The added game details will be seen in the product details page.
+
+- **Update game details**
+  - Admin can update game details for a game product from the product details page by accessing an `update` button in the game details card. After the update, Admin will be redirected the product details.
+ 
+- **Delete game details**
+  - Admin can delete game details for a game product from the product details page by accessing a `delete` button in the game details card. After the deletion, Admin will be redirected to the product details page with only product information.
+
+- **Add console specs**
+  - Admin has access to form in the website to create a new console specs that coordinates with the console product. The added console specs will be seen in the product details page.
+
+- **Update console specs**
+  - Admin can update console specs for a console product from the product details page by accessing an `update` button in the console specs card. After the update, Admin will be redirected the product details with only product information.
+
+- **Delete console specs**
+  - Admin can delete console specs for a console product from the product details page by accessing a `delete` button in the console specs card. After the deletion, Admin will be redirected to the product details page with only product information.
+
+- **Contact us page**
+  - Shoppers have access to a contact form where they can reach the administrator by leaving personal details and a message and choosing a topic.
+
+- **Register an account**
+  - Shoppers have access to a form so that they can register an account
+
+ 
+- **log in an account**
+  - Shoppers have access to a form so that they can log in to an accounts
+
+ 
+- **log out of an account**
+  - Shoppers can log out of an account
+
+- **Newsletter: Mailchimp Integration**
+  - The website integrates with Mailchimp, allowing users to subscribe to the newsletter. Users can fill in their email address, and a confirmation message will appear to acknowledge their subscription.
+
+- **External links**
+  - Linkedin link that takes the visitor to linkedin official site
+  - Github link that takes the visitor to the project repository in github
+
+- **messages**
+  - The shopper can view a confirmation toast message when registering an account, loging in, loging out, adding items to bag and successful checkout.
+  - Admin can view a confirmation toast message when adding product or game details or console specs, updating product or game details or console specs and deleting product or game details or console specs.
+
+- **Error Pages**
+  - The site contains custom error page for 404 errors.
+
 ### Addtional features to implement
 
 ## Testing
@@ -159,29 +266,316 @@ This database schema lays out the structure for the Play Zone application, givin
 
 ### Manual testing
 #### Security testing
-#### testing user stories
+
+Ensuring that users cannot access or modify content created by the superuser is crucial for maintaining the integrity and security of the application. The table demonstrates the application's robustness in handling unauthorized access attempts, ensuring user data security and integrity.
+
+The following tests were conducted to verify that unauthorized access attempts are properly handled.
+
+| Test Case | Description | Method | Expected Outcome | Actual Outcome | Result |
+| --------- | ----------- | ------ | ---------------- | -------------- | --------- |
+| Create Product Unauthorized Access | Non-admin attempting to create a product | Manual URL manipulation | The product creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Edit Product Unauthorized Access | Non-admin attempting to edit a product | Manual URL manipulation | The edit form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Delete Product Unauthorized Access | Non-admin attempting to delete a product | Manual URL manipulation | The adress non-functional | Redirect to products list page | ✅ |
+| Create Game Unauthorized Access | Non-admin attempting to create a game | Manual URL manipulation | The game creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Edit Game Unauthorized Access | Non-admin attempting to edit a game | Manual URL manipulation | The edit form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Delete Game Unauthorized Access | Non-admin attempting to delete a game | Manual URL manipulation | The adress non-functional | Redirect to the correspondent product details page | ✅ |
+| Create Console Unauthorized Access | Non-admin attempting to create a Console | Manual URL manipulation | The Console creation form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Edit Console Unauthorized Access | Non-admin attempting to edit a Console | Manual URL manipulation | The edit form is unavailable | A message tells this feature is only available to superusers | ✅ |
+| Delete Console Unauthorized Access | Non-admin attempting to delete a console | Manual URL manipulation | The adress non-functional | Redirect to the correspondent product details page | ✅ |
+|
+
 #### Element testing
+- Clicked game and console external links. The result: Opens in a new tab. PASS 
+
+**header**
+
+- **`Not logged in user`**
+
+| Feature | Expected Function | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Logo | Redirects to landing page | Clicked on logo | Home page loads | ✅ |
+| All products | A dropdown menu will show up | Clicked on 'all products' menu| The dropdown menu is triggered | ✅ |
+| Games | A dropdown menu will show up | Clicked on 'games' menu| The dropdown menu is triggered | ✅ |
+| Consoles | A dropdown menu will show up | Clicked on the 'consoles' menu | The dropdown menu is triggered | ✅ |
+| Account icon | A dropdown menu will show up | Clicked on the link icon 'Account' | The dropdown menu is triggered | ✅ |
+| Bag icon | The bag page loads | Clicked on the link icon 'bag' | Redirected to bag page | ✅ |
+| News | The store's official news site loads  | Clicked on the link 'news' | Redirected to the gaming news site | ✅ |
+| Contact us | View a form to leave a message | Clicked on the link 'Contact us' | The user view a contact form to send a message | ✅ |
+| Search bar | View search results | Added a search word and clicked on the search icon | search results show up | ✅ |
+|
+
+**header drop down menus**
+
+- **`Not logged in user`**
+
+| Feature | Expected Function | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Account icon | both register and login links takes you to correspondant pages| Clicked on both links | Both links takes you to correspondant pages | ✅ |
+| All products | All links in the menu takes you to correspondant pages | Clicked on all 'all products' menu links| All products list and sorted products lists load | ✅ |
+| Games | All links in the menu takes you to all filtered game products lists by category and all game products list | Clicked on all 'games' menu links| All links in the menu takes you to correspondant pages  | ✅ |
+| Consoles | A dropdown menu will show up | Clicked on all 'consoles' menu links | All links in the menu takes you to all filtered console products lists by category and all console products list | ✅ |
+|
+&nbsp;
+- **`Logged in as superuser`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Account icon | All links add product, game, console and logout takes you to the correpondant pages | Clicked on all account menu links | ✅ |
+|
+
+&nbsp;
+
+
+**footer**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Newsletter | The user can fill in an email and then receive a confirmation message for subscription | Filled in an email and clicked on the subscribe button | ✅ |
+| Github link | when clicked it takes you the github project repository | Clicked on github link | ✅ |
+| Linkedin link | when clicked it takes you the the linkedin official site | Clicked on linkedin link | ✅ |
+|
+&nbsp;
+
+**Account Pages**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Register page | The user can view a regiter form and fill in an email, a username and a password and regsiter an acccount | Filled in all fields and clicked on the signup button | ✅ |
+| login page | The user can view a login form and fill in a username and a password and login to account | Filled in a username and a password and clicked on the login button | ✅ |
+| logout page | The user can view a logout page and has access to a logout button and logout  | Clicked on the logout button | ✅ |
+|
+&nbsp;
+
+**Products list**
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Product image link | When clicked it takes you to the product details page | Clicked on the image link | ✅ |
+| Category link in each product card | When clicked it takes that specific category products list | Clicked on category link | ✅ |
+| Sort drop down menu | View correspondant sorted lists with each 'sort by' option | Clicked on the logout button | ✅ |
+|
+&nbsp;
+
+- **`Logged in as superuser`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| edit button | When clicked it takes you to the 'edit product' form page | Clicked on the 'update link' | ✅ |
+| delete button | When clicked it deletes the product from the list | Clicked on the image 'delete' link | ✅ |
+|
+&nbsp;
+
+**Product Details**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| quantity input | The user can add manually the quantity of product | Added manually a number  | ✅ |
+| '+' button | When clicked it increases the quantity of product | Clicked on the '+' button | ✅ |
+| '-' button | When clicked it decreases the quantity of product | Clicked on the '-' button| ✅ |
+| Category link | When clicked it takes you to that specific category products list | Clicked on category link | ✅ |
+| 'Add to bag' | When clicked the selected quantity of the product is added to bag | Clicked on the 'add to bag' button | ✅ |
+| 'keep shopping' button | When clicked it takes you to the products list | Clicked on the 'keep shopping' button | ✅ |
+|
+&nbsp;
+
+
+- **`Logged in as superuser`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| edit button for product | When clicked it takes you to the 'edit product' form page | Clicked on the 'update product link' | ✅ |
+| delete button for product | When clicked it deletes the product then redirected to the products list | Clicked on the image 'delete' link | ✅ |
+| edit button for game | When clicked it takes you to the 'edit game' form page | Clicked on the 'update game link' | ✅ |
+| delete button for game | When clicked it deletes the game then redirected to the products list | Clicked on the image 'delete game' link | ✅ |
+| edit button for console | When clicked it takes you to the 'edit console' form page | Clicked on the 'update console link' | ✅ |
+| delete button for console | When clicked it deletes the console then redirected to the correspondant product details | Clicked on the image 'delete' link | ✅ |
+|
+&nbsp;
+
+**Add, edit and delete items**
+- **`Logged in as superuser`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Add product, game, console | Superuser has access to all 'Add item' forms, can fill in all fields with no validation errors and objects are created.  | Filled in all necessary fields and clicked on 'add object' buttton  | ✅ |
+| Edit product, game, console | Superuser has access to all 'Edit item' forms, can modify selected fields with no validation errors and objects are updated.  | Made changes in all necessary fields and clicked on 'update object' buttton  | ✅ |
+| Delete product, game, console | Superuser has access to all 'Delete item' buttons, can delete selected objects | clicked on 'delete object' buttton  | ✅ |
+&nbsp;
+
+**Send a message**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Send a message to the administrator | Users has access to contact form, can fill in all fields with no validation errors and receive a confirmation message that message is sent.  | Filled in all necessary fields in contact form and clicked on 'Send' button  | ✅ |
+|
+&nbsp;
+
+**Shopping bag**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| quantity input | The user can add manually the quantity of product | Added manually a number  | ✅ |
+| '+' button | When clicked it increases the quantity of product | Clicked on the '+' button | ✅ |
+| '-' button | When clicked it decreases the quantity of product | Clicked on the '-' button| ✅ |
+| update button for product quantity | When clicked it updates the quantity of product  | Clicked on the 'update link' after changing quantity | ✅ |
+| delete button for product quantity | When clicked it deletes the product from the shopping bag  | Clicked on the 'delete link' | ✅ |
+| 'Secure checkout' button | When clicked it takes to the checkout page | Clicked on the 'Secure checkout' button | ✅ |
+| 'keep shopping' button | When clicked it takes you to the products list | Clicked on the 'keep shopping' button | ✅ |
+|
+&nbsp;
+
+**Checkout page**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| checkout and payment forms | The form is filled with no validation errors | Added manually a number  | ✅ |
+| 'Complete Order' button | When clicked it processes your order and you receive an order confirmation page and message | Clicked on the 'Complete Order' button | ✅ |
+| 'Adjust bag' button | When clicked it takes you back to the shopping bag page | Clicked on the 'Adjust bag' button | ✅ |
+|
+&nbsp;
+
+**Order confirmation page**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| 'Go back to the store' button | redirects to products list page | Clicked on 'go back' button  | ✅ |
+|
+&nbsp;
 
 ### Responsivenss
-
+- I used google chrome device toolbar in devtools to test responsiveness of my project in with different devices. `mobile devices`, `tablets`, `desktop` and `larger screens`.
 ## Technologies used
 ### Languages
-### Frameworks
-### Installed packages
-### Other technologies
+- HTML5
+- CSS3
+- JavaScript
+- Python
+
+### Frameworks, libraries and other technologies
+- Stripe
+- heroku
+- github
+- git
+- Code Institute Postgres Database server
+- bootstrap 4.6
+- asgiref==3.8.1
+- cloudinary==1.36.0
+- dj-database-url==0.5.0
+- dj3-cloudinary-storage==0.0.6
+- Django==4.2.16
+- django-allauth==0.57.2
+- django-countries==7.2.1
+- django-crispy-forms==1.14.0
+- gunicorn==20.1.0
+- oauthlib==3.2.2
+- pillow==11.0.0
+- psycopg2==2.9.10
+- PyJWT==2.9.0
+- python3-openid==3.2.0
+- requests-oauthlib==2.0.0
+sqlparse==0.5.1
+- stripe==11.2.0
+- urllib3==1.26.20
+- whitenoise==6.8.2
+
+
 
 ## Bugs
 ### Solved bugs
 ### Unsolved bugs
 
 ## Web Marketing
+
+PlayZone stands as a B2C e-commerce platform, dedicated to gaming enthusiasts that are mostly interested in console gaming and want to keep updated with the latest gen of gaming hardware and software. 
+
+### Key Advantages for PlayZone:
+- Cost Efficiency: By offering products at near cost price, we ensure that our clients get deals and lower prices than other similar stores to gain loyal customers.
+- Quick Delivery: Our efficient logistics ensure that products are delivered swiftly to reach our customers as early as possible and it's free when the customer reaches a certain amount.
+- Diverse Product Range: We have wide range of games and consoles on different platforms.
+
+### Marketing and Customer Engagement Strategies:
+- In our store we added a newsletter that only requires from users to fill an email to make it easy for them to subscribe. By gaining more subscribers we can reach more people through email to advertise our products and let them know about our deals.
+
+- Facebook Business Page: We want to interact with our audience, communicate product updates, and provide customer service by using Facebook's business features to build a thorough business page. Customers can reach us ![Facebook Business Page](./readme_images/facebook_page.png)
+
+  Link to the Facebook Business Page [Here](https://www.facebook.com/profile.php?id=61569954351726)
+
+- Community Building: By providing insightful advice through our content, and arranging gaming events to gather gamers, we hope to create a knowledgeable user base that will increase client loyalty and engagement.
+
+- We have a contact form in our website to make it easy for customers to reach us for whatever topic or service thay may need.
+
+### Site Features and User Experience:
+PlayZone's user-friendly design includes a simplified purchasing procedure, committed customer service, and easy navigation. We want every visitor to be able to quickly locate their favorite games and systems and stay updated with the newest releases.
+
 ### Business model
 ### Marketing strategy
 
 ## Search Engine Optimization
+SEO and Content Strategy: We aim to find and target important search terms related to our variety of latest gaming platforms and products using technologies like WordTracker and Google Trends.
+
 ### Keywords
+Keywords is a fundamental key for our website to be ranked highly by google search. Keywords are a combination of short tail and long tail keywords.
+
+- **Short tail keywords**
+  - `Xbox series X games`
+  - `Xbox series S games`
+  - `PS5 games`
+  - `Nintendo switch games`
+  - `Latest games`
+  - `Latest consoles`
+  - `Xbox games`
+  - `Playstation games`
+  - `Nintendo games`
+  - `Xbox consoles`
+  - `Playstation consoles`
+  - `Nintendo consoles`
+  - `buy latest games`
+  - `buy latest consoles`
+  - `game store`
+
+- **Long tail keywords**
+  - `Buy PS5 games online`
+  - `Buy Xbox series games online`
+  - `Buy Nintendo Switch games online`
+  - `Affordable Xbox Series X consoles`
+  - `Best Nintendo Switch games for families`
+  - `Newest video games for PS5`
+  - `The best of latest gen games`
+  - `The best of latest gen consoles`
+  - `Top-rated Xbox Series X games`
+  - `Where to buy gaming consoles online`
+  - `New Nintendo Switch releases online`
+  - `Latest Xbox Series X games`
+  - `Game store that sells games and consoles`
+  - `Good ideas for gifts to gamers`
+
 ### Robots.txt
+- The robots.txt file was created and uploaded to the root directory of the site. This file tells search engines where they are not allowed to go on our website. The existence of this file is a sign of quality and therefore it improves SEO ranking.
+
 ### Sitemap.xml
+- Sitemap was generated using [XML sitemaps](https://www.xml-sitemaps.com/) and uploaded to the root directory. This file lists a website’s  
+important page urls, making sure that search engines can navigate through them. It also helps search engines understand your website structure.
+
+### Content
+- I used semantic elements in my project to keep a structure that is customized for SEO.
+- I used keywords in headings and put them in strong tags to emphasize it's importance. 
+- The project has internal links that leads to all pages to help users to continue exploring my site.
+- I used external links for each product either a game or console that provides more information about the product and they link to official sites for Sony Playstation, Microsoft Xbox and Nintendo.
+
+### Page titles
+- For the home page i chose a document title that indicates the domain name and whay kind of products users will expect, The title is also customized to keywords for SEO purposes.
+- I used different document titles when filtering games and consoles. 
 
 ## Deployment
 
@@ -290,7 +684,7 @@ By forking the GitHub Repository, you can create a copy of the original reposito
 - At the top right of the repository page, click "Fork" to create a copy in your own GitHub repository.
 ---
 
-**Clone the Repository:**
+### Clone the Repository:
 When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations. Creating a clone allows you to have a local copy of the project. Follow these steps:
 
 - Navigate to https://github.com/programmer-1991/play-zone
@@ -302,3 +696,5 @@ When you create a repository on GitHub.com, it exists as a remote repository. Yo
 
 
 ## Credits
+- I used walkthrough project Boutique Ado as a base for my project.
+- I used google fonts for fonts
