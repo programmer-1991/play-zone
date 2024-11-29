@@ -98,7 +98,7 @@ PlayZone is an online game store that offers a wide range of game genres and pla
 When creating the database structure schema for this project, I utilized the [drawsql.app](https://drawsql.app/) website. This online tool allowed me to visually design and document the database schema, making it easier to plan and implement the database for my e-commerce web application.
 <center>
 
-![Database Schema image](./ERD.png)
+![Database Schema image](./readme_images/drawSQL-image-export-2024-11-29.png)
 
 </center>
 
@@ -144,6 +144,7 @@ This database schema lays out the structure for the Play Zone application, givin
 
 ## Design
 ### Color
+- I used the same coulours used in the walkthrough project Boutique Ado.
 ### Typography
 
 - Lato's readability and versatility are perhaps the main reasons it was chosen for 
@@ -695,3 +696,5 @@ When you create a repository on GitHub.com, it exists as a remote repository. Yo
 
 
 ## Credits
+- I used walkthrough project Boutique Ado as a base for my project.
+- I used google fonts for fonts
