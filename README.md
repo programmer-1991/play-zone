@@ -290,10 +290,174 @@ The following tests were conducted to verify that unauthorized access attempts a
 | Delete Console Unauthorized Access | Non-admin attempting to delete a console | Manual URL manipulation | The adress non-functional | Redirect to the correspondent product details page | ✅ |
 |
 
-
-#### testing user stories
 #### Element testing
 - Clicked game and console external links. The result: Opens in a new tab. PASS 
+
+**header**
+
+- **`Not logged in user`**
+
+| Feature | Expected Function | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Logo | Redirects to landing page | Clicked on logo | Home page loads | ✅ |
+| All products | A dropdown menu will show up | Clicked on 'all products' menu| The dropdown menu is triggered | ✅ |
+| Games | A dropdown menu will show up | Clicked on 'games' menu| The dropdown menu is triggered | ✅ |
+| Consoles | A dropdown menu will show up | Clicked on the 'consoles' menu | The dropdown menu is triggered | ✅ |
+| Account icon | A dropdown menu will show up | Clicked on the link icon 'Account' | The dropdown menu is triggered | ✅ |
+| Bag icon | The bag page loads | Clicked on the link icon 'bag' | Redirected to bag page | ✅ |
+| News | The store's official news site loads  | Clicked on the link 'news' | Redirected to the gaming news site | ✅ |
+| Contact us | View a form to leave a message | Clicked on the link 'Contact us' | The user view a contact form to send a message | ✅ |
+| Search bar | View search results | Added a search word and clicked on the search icon | search results show up | ✅ |
+|
+
+**header drop down menus**
+
+- **`Not logged in user`**
+
+| Feature | Expected Function | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Account icon | both register and login links takes you to correspondant pages| Clicked on both links | Both links takes you to correspondant pages | ✅ |
+| All products | All links in the menu takes you to correspondant pages | Clicked on all 'all products' menu links| All products list and sorted products lists load | ✅ |
+| Games | All links in the menu takes you to all filtered game products lists by category and all game products list | Clicked on all 'games' menu links| All links in the menu takes you to correspondant pages  | ✅ |
+| Consoles | A dropdown menu will show up | Clicked on all 'consoles' menu links | All links in the menu takes you to all filtered console products lists by category and all console products list | ✅ |
+|
+&nbsp;
+- **`Logged in as superuser`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Account icon | All links add product, game, console and logout takes you to the correpondant pages | Clicked on all account menu links | ✅ |
+|
+
+&nbsp;
+
+
+**footer**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Newsletter | The user can fill in an email and then receive a confirmation message for subscription | Filled in an email and clicked on the subscribe button | ✅ |
+| Github link | when clicked it takes you the github project repository | Clicked on github link | ✅ |
+| Linkedin link | when clicked it takes you the the linkedin official site | Clicked on linkedin link | ✅ |
+|
+&nbsp;
+
+**Account Pages**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Register page | The user can view a regiter form and fill in an email, a username and a password and regsiter an acccount | Filled in all fields and clicked on the signup button | ✅ |
+| login page | The user can view a login form and fill in a username and a password and login to account | Filled in a username and a password and clicked on the login button | ✅ |
+| logout page | The user can view a logout page and has access to a logout button and logout  | Clicked on the logout button | ✅ |
+|
+&nbsp;
+
+**Products list**
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Product image link | When clicked it takes you to the product details page | Clicked on the image link | ✅ |
+| Category link in each product card | When clicked it takes that specific category products list | Clicked on category link | ✅ |
+| Sort drop down menu | View correspondant sorted lists with each 'sort by' option | Clicked on the logout button | ✅ |
+|
+&nbsp;
+
+- **`Logged in as superuser`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| edit button | When clicked it takes you to the 'edit product' form page | Clicked on the 'update link' | ✅ |
+| delete button | When clicked it deletes the product from the list | Clicked on the image 'delete' link | ✅ |
+|
+&nbsp;
+
+**Product Details**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| quantity input | The user can add manually the quantity of product | Added manually a number  | ✅ |
+| '+' button | When clicked it increases the quantity of product | Clicked on the '+' button | ✅ |
+| '-' button | When clicked it decreases the quantity of product | Clicked on the '-' button| ✅ |
+| Category link | When clicked it takes you to that specific category products list | Clicked on category link | ✅ |
+| 'Add to bag' | When clicked the selected quantity of the product is added to bag | Clicked on the 'add to bag' button | ✅ |
+| 'keep shopping' button | When clicked it takes you to the products list | Clicked on the 'keep shopping' button | ✅ |
+|
+&nbsp;
+
+
+- **`Logged in as superuser`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| edit button for product | When clicked it takes you to the 'edit product' form page | Clicked on the 'update product link' | ✅ |
+| delete button for product | When clicked it deletes the product then redirected to the products list | Clicked on the image 'delete' link | ✅ |
+| edit button for game | When clicked it takes you to the 'edit game' form page | Clicked on the 'update game link' | ✅ |
+| delete button for game | When clicked it deletes the game then redirected to the products list | Clicked on the image 'delete game' link | ✅ |
+| edit button for console | When clicked it takes you to the 'edit console' form page | Clicked on the 'update console link' | ✅ |
+| delete button for console | When clicked it deletes the console then redirected to the correspondant product details | Clicked on the image 'delete' link | ✅ |
+|
+&nbsp;
+
+**Add, edit and delete items**
+- **`Logged in as superuser`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Add product, game, console | Superuser has access to all 'Add item' forms, can fill in all fields with no validation errors and objects are created.  | Filled in all necessary fields and clicked on 'add object' buttton  | ✅ |
+| Edit product, game, console | Superuser has access to all 'Edit item' forms, can modify selected fields with no validation errors and objects are updated.  | Made changes in all necessary fields and clicked on 'update object' buttton  | ✅ |
+| Delete product, game, console | Superuser has access to all 'Delete item' buttons, can delete selected objects | clicked on 'delete object' buttton  | ✅ |
+&nbsp;
+
+**Send a message**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| Send a message to the administrator | Users has access to contact form, can fill in all fields with no validation errors and receive a confirmation message that message is sent.  | Filled in all necessary fields in contact form and clicked on 'Send' button  | ✅ |
+|
+&nbsp;
+
+**Shopping bag**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| quantity input | The user can add manually the quantity of product | Added manually a number  | ✅ |
+| '+' button | When clicked it increases the quantity of product | Clicked on the '+' button | ✅ |
+| '-' button | When clicked it decreases the quantity of product | Clicked on the '-' button| ✅ |
+| update button for product quantity | When clicked it updates the quantity of product  | Clicked on the 'update link' after changing quantity | ✅ |
+| delete button for product quantity | When clicked it deletes the product from the shopping bag  | Clicked on the 'delete link' | ✅ |
+| 'Secure checkout' button | When clicked it takes to the checkout page | Clicked on the 'Secure checkout' button | ✅ |
+| 'keep shopping' button | When clicked it takes you to the products list | Clicked on the 'keep shopping' button | ✅ |
+|
+&nbsp;
+
+**Checkout page**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| checkout and payment forms | The form is filled with no validation errors | Added manually a number  | ✅ |
+| 'Complete Order' button | When clicked it processes your order and you receive an order confirmation page and message | Clicked on the 'Complete Order' button | ✅ |
+| 'Adjust bag' button | When clicked it takes you back to the shopping bag page | Clicked on the 'Adjust bag' button | ✅ |
+|
+&nbsp;
+
+**Order confirmation page**
+
+- **`Logged in as user/Not logged in`**
+
+| Feature | Expected Function | Testing Performed | Pass/Fail |
+| --- | --- | --- | --- |
+| 'Go back to the store' button | redirects to products list page | Clicked on 'go back' button  | ✅ |
+|
+&nbsp;
 
 ### Responsivenss
 
