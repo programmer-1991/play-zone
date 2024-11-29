@@ -226,12 +226,12 @@ This database schema lays out the structure for the Play Zone application, givin
 - **Register an account**
   - Shoppers have access to a form so that they can register an account
 
-  ![Register page](./sign-up.png)
+  ![Register page]()
 
 - **log in an account**
   - Shoppers have access to a form so that they can log in to an accounts
 
-  ![Log in page](./sign-in.png)
+  ![Log in page]()
 
 - **log out of an account**
   - Shoppers can log out of an account
