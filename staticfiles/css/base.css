@@ -73,6 +73,11 @@ a.category-badge > span.badge:hover {
 .remove-item {
     cursor: pointer;
 }
+/********input********/
+.qty_input{
+    max-width: 3.5em;
+}
+/*********************/
 
 /*bootstrap toasts*/
 
@@ -174,3 +179,4 @@ a.category-badge > span.badge:hover {
         height: calc(100vh - 116px);
     }
 }
+
