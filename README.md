@@ -463,9 +463,38 @@ The following tests were conducted to verify that unauthorized access attempts a
 - I used google chrome device toolbar in devtools to test responsiveness of my project in with different devices. `mobile devices`, `tablets`, `desktop` and `larger screens`.
 ## Technologies used
 ### Languages
-### Frameworks
-### Installed packages
-### Other technologies
+- HTML5
+- CSS3
+- JavaScript
+- Python
+
+### Frameworks, libraries and other technologies
+- heroku
+- github
+- git
+- Code Institute Postgres Database server
+- bootstrap 4.6
+- asgiref==3.8.1
+- cloudinary==1.36.0
+- dj-database-url==0.5.0
+- dj3-cloudinary-storage==0.0.6
+- Django==4.2.16
+- django-allauth==0.57.2
+- django-countries==7.2.1
+- django-crispy-forms==1.14.0
+- gunicorn==20.1.0
+- oauthlib==3.2.2
+- pillow==11.0.0
+- psycopg2==2.9.10
+- PyJWT==2.9.0
+- python3-openid==3.2.0
+- requests-oauthlib==2.0.0
+sqlparse==0.5.1
+- stripe==11.2.0
+- urllib3==1.26.20
+- whitenoise==6.8.2
+
+
 
 ## Bugs
 ### Solved bugs
