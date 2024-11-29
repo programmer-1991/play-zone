@@ -2,6 +2,8 @@
 
 PlayZone is an online game store that offers a wide range of game genres and platforms, as well as game consoles. Our store ensures a smooth shopping experience with secure checkout, fast shipping, and special offers. It caters to gamers interested in the console gaming experience and want to stay updated with the latest games and consoles in the gaming industry. Additionally, our website features a section for upcoming games and consoles to keep you informed and prepared for new releases, and our content is updated regularly with what's in the gaming market. PlayZone is where your gaming journey begins and evolves – play more, pay less!
 
+![responsive](./readme_images/responsive.png)
+
 ## Project goals
 - __User goals__
     - To keep updated with the latest games and consoles in the gaming industry
@@ -143,9 +145,9 @@ This database schema lays out the structure for the Play Zone application, givin
 ## Design
 ### Color
 ### Typography
+
 - Lato's readability and versatility are perhaps the main reasons it was chosen for 
   the MarketFlex platform. Lato is appropriate for a variety of purposes since it strikes a balance between somber and amiable tones. For an e-commerce site where clear communication is essential, its well-structured characters improve readability.
-
 
 ### Layout
 ### Wireframes
