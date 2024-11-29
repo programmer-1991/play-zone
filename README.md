@@ -460,7 +460,7 @@ The following tests were conducted to verify that unauthorized access attempts a
 &nbsp;
 
 ### Responsivenss
-
+- I used google chrome device toolbar in devtools to test responsiveness of my project in with different devices. `mobile devices`, `tablets`, `desktop` and `larger screens`.
 ## Technologies used
 ### Languages
 ### Frameworks
