@@ -469,6 +469,7 @@ The following tests were conducted to verify that unauthorized access attempts a
 - Python
 
 ### Frameworks, libraries and other technologies
+- Stripe
 - heroku
 - github
 - git
@@ -501,6 +502,28 @@ sqlparse==0.5.1
 ### Unsolved bugs
 
 ## Web Marketing
+
+PlayZone stands as a B2C e-commerce platform, dedicated to gaming enthusiasts that are mostly interested in console gaming and want to keep updated with the latest gen of gaming hardware and software. 
+
+### Key Advantages for PlayZone:
+- Cost Efficiency: By offering products at near cost price, we ensure that our clients get deals and lower prices than other similar stores to gain loyal customers.
+- Quick Delivery: Our efficient logistics ensure that products are delivered swiftly to reach our customers as early as possible and it's free when the customer reaches a certain amount.
+- Diverse Product Range: We have wide range of games and consoles on different platforms.
+
+### Marketing and Customer Engagement Strategies:
+- In our store we added a newsletter that only requires from users to fill an email to make it easy for them to subscribe. By gaining more subscribers we can reach more people through email to advertise our products and let them know about our deals.
+
+- Facebook Business Page: We want to interact with our audience, communicate product updates, and provide customer service by using Facebook's business features to build a thorough business page. Customers can reach us ![Facebook Business Page](./readme_images/facebook_page.png)
+
+  Link to the Facebook Business Page [Here](https://www.facebook.com/profile.php?id=61569954351726)
+
+- Community Building: By providing insightful advice through our content, and arranging gaming events to gather gamers, we hope to create a knowledgeable user base that will increase client loyalty and engagement.
+
+- We have a contact form in our website to make it easy for customers to reach us for whatever topic or service thay may need.
+
+### Site Features and User Experience:
+PlayZone's user-friendly design includes a simplified purchasing procedure, committed customer service, and easy navigation. We want every visitor to be able to quickly locate their favorite games and systems and stay updated with the newest releases.
+
 ### Business model
 ### Marketing strategy
 
