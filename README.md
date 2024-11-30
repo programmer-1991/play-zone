@@ -259,10 +259,21 @@ This database schema lays out the structure for the Play Zone application, givin
 
 ## Testing
 ### Code validation
+
 #### Html validation
+
 #### Css validation
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- |:---:
+|style.css| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/base.css.png)</details>| ✅
+|checkout.css| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/checkout.css.png)</details> | ✅
+|
+
 #### Javascript validation
+
 #### Python validation
+
 
 ### Manual testing
 #### Security testing
