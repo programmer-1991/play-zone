@@ -259,9 +259,63 @@ This database schema lays out the structure for the Play Zone application, givin
 
 ## Testing
 ### Code validation
+
 #### Html validation
+
 #### Css validation
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- |:---:
+|style.css| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/base.css.png)</details>| ✅
+|checkout.css| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/checkout.css.png)</details> | ✅
+|
+
 #### Javascript validation
+- No errors were found when passing javascript code through the official [Jshint validator](https://jshint.com/). The following Metricsz were returned:
+
+  - stripe_elements.js: 
+    - Metrics
+      There are 5 functions in this file.
+      Function with the largest signature take 1 arguments, while the median is 1.
+      Largest function has 10 statements in it, while the median is 5.
+      The most complex function has a cyclomatic complexity value of 3 while the median is 1.
+
+  - update_remove_quantity.js:
+     - Metrics
+      There are 3 functions in this file.
+      Function with the largest signature take 1 arguments, while the median is 1.
+      Largest function has 5 statements in it, while the median is 2.
+      The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+      
+  - back-to-top.js: 
+    - Metrics
+      There is only one function in this file.
+      It takes one argument.
+      This function contains only one statement.
+      Cyclomatic complexity number for this function is 1.
+
+  - quantity_input_script.js:
+    - Metrics
+    There are 4 functions in this file.
+    Function with the largest signature take 1 arguments, while the median is 1.
+    Largest function has 6 statements in it, while the median is 5.5.
+    The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+  - sorting.js:
+    - Metrics
+    There is only one function in this file.
+    It takes no arguments.
+    This function contains 12 statements.
+    Cyclomatic complexity number for this function is 2.
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | ---| :---:|
+|back-to-top.js| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/back-to-top.png)| ✅ |
+|quantity_input_script.js| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/quantity-input.png) | ✅ |
+|sorting.js| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/sorting.png) | ✅ |
+|update_remove_quantity.js| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/update-remove-quantity.png) | ✅ |
+|stripe_elements.js| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/stripe-elements.png) | ✅ |
+|
+
 #### Python validation
 
 ### Manual testing
