@@ -258,16 +258,47 @@ This database schema lays out the structure for the Play Zone application, givin
 ### Addtional features to implement
 
 ## Testing
+
 ### Code validation
 
 #### Html validation
+
+### HTML Validation
+
+I used the[W3C Markup Validation](https://validator.w3.org/) service to check the HTML code of my project for compliance with web standards. This tool is essential for identifying syntax errors and ensuring robust and standard-compliant HTML.
+
+The HTML pages were extracted from dev tools using Google Chrome's inspect feature and then copy the HTML code for every page from sources. This code doesn't include Django Template Language to avoid validation errors (Some characters are not allowed) when using tools like W3C validator.
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+|login.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|logout.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|signup.html| One error: can't fix | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|contact.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|index.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|products.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|product_details.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|add_product.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|add_game.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|add_console.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|edit_product.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|edit_game.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|edit_console.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|bag.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme/screenshots/create_post.png)</details>| ✅ |
+|checkout.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme/screenshots/create_game.png)</details>| ✅ |
+|checkout_success.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
+|404.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme/screenshots/game_list.png)</details>| ✅ |
+|
+
+  - __unfixed errors__:
+    - register.html: `ul` element is not supposed to be in `small element`. This page is a crispy form and the unordered list is requirements for password field and are built-in in the form. I can't manually change the structure of it.
 
 #### Css validation
 
 | **Tested** | **Result** | **View Result** | **Pass** |
 --- | --- | --- |:---:
-|style.css| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/base.css.png)</details>| ✅
-|checkout.css| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/checkout.css.png)</details> | ✅
+|style.css| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/base.css.png)</details>| ✅ |
+|checkout.css| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/checkout.css.png)</details> | ✅ |
 |
 
 #### Javascript validation
@@ -279,14 +310,13 @@ This database schema lays out the structure for the Play Zone application, givin
       Function with the largest signature take 1 arguments, while the median is 1.
       Largest function has 10 statements in it, while the median is 5.
       The most complex function has a cyclomatic complexity value of 3 while the median is 1.
-
   - update_remove_quantity.js:
      - Metrics
       There are 3 functions in this file.
       Function with the largest signature take 1 arguments, while the median is 1.
       Largest function has 5 statements in it, while the median is 2.
       The most complex function has a cyclomatic complexity value of 1 while the median is 1.
-      
+
   - back-to-top.js: 
     - Metrics
       There is only one function in this file.
@@ -300,6 +330,7 @@ This database schema lays out the structure for the Play Zone application, givin
     Function with the largest signature take 1 arguments, while the median is 1.
     Largest function has 6 statements in it, while the median is 5.5.
     The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+
   - sorting.js:
     - Metrics
     There is only one function in this file.
@@ -317,6 +348,7 @@ This database schema lays out the structure for the Play Zone application, givin
 |
 
 #### Python validation
+
 
 ### Manual testing
 #### Security testing

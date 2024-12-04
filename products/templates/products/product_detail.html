@@ -10,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -105,24 +104,24 @@
                 </div>
                 <div class="row card-body details p-4">
                     <div class="col cell">
-                        <dl class="mt-3 row justify-content-center py-0 px-4">
-                            <div class="col">
+                        <div class="mt-3 row justify-content-center py-0 px-4">
+                            <dl class="col">
                                 <dt>Developed by</dt>
                                 <dd id="developer">{{ game.developer }}</dd>
                                 <dt>Published by</dt>
                                 <dd id="publisher">{{ game.publisher}}</dd>
                                 <dt>Platform</dt>
-                                <dd id="platform" data-id={{game.platform}}>{{ game.platform }}</dd>
-                            </div>
-                            <div class="col">
+                                <dd id="platform">{{ game.platform }}</dd>
+                            </dl>
+                            <dl class="col">
                                 <dt>Genre</dt>
                                 <dd id="genre">{{ game.genre }}</dd>
                                 <dt>Release date</dt>
                                 <dd id="release">{{ game.release }}</dd>
                                 <dt>Game rating</dt>
                                 <dd id="age">{{ game.age_rating}}</dd>
-                            </div>
-                        </dl>
+                            </dl>
+                        </div>
                         <div class="d-flex justify-content-center">
                             <a class="btn btn-primary mx-auto" href="{{ game.info }}" target="blank" rel="noopener">About <strong>{{game.title}}</strong></a>
                         </div>
@@ -146,8 +145,8 @@
                             <a class="text-danger" href="{% url 'delete_console' console.id %}">Delete</a>
                             {% endif %}
                         </div>
-                        <dl class="mt-3 row justify-content-center py-0 px-4">
-                            <div class="col">
+                        <div class="mt-3 row justify-content-center py-0 px-4">
+                            <dl class="col">
                                 <dt>Developed by</dt>
                                 <dd id="developer">{{ console.developer }}</dd>
                                 <dt>Manufactured by</dt>
@@ -158,8 +157,8 @@
                                 <dd id="age">{{ console.memory}}</dd>
                                 <dt>Storage</dt>
                                 <dd id="age">{{ console.storage}}</dd>
-                            </div>
-                            <div class="col">
+                            </dl>
+                            <dl class="col">
                                 <dt>Processor</dt>
                                 <dd id="genre">{{ console.processor }}</dd>
                                 <dt>Release date</dt>
@@ -170,53 +169,12 @@
                                 <dd id="age">{{ console.sound}}</dd>
                                 <dt>Mass</dt>
                                 <dd id="age">{{ console.mass}}</dd>
-                            </div>
-                        </dl>
+                            </dl>
+                        </div>
                         <div class="d-flex justify-content-center p-3">
                             <a class="btn btn-primary mx-auto" href="{{ console.info }}" target="blank" rel="noopener">About <strong>{{console.title}}</strong></a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %}
-
-    {% if user.is_superuser %}
-    <!-- Update details -->
-    {% load crispy_forms_tags %}
-    <div class="col-sm-12 col-lg-9 card form-card mb-4 mt-3 auto" style="display:none;" id="form_card">
-        <div class="card-body">
-            <h3>Update game details:</h3>
-            <!--submit form-->
-            <form id="form" method="post" class="mt-3" enctype="multipart/form-data">
-                {{ form | crispy }}
-                {% csrf_token %}
-                <div class="text-center">
-                    <button id="submit_button" type="submit" class="btn btn-lg form-button">Submit</button>
-                </div>
-
-            </form>
-        </div>
-    </div>
-
-    <!-- confirm deletion -->
-    <div class="modal fade position-absolute" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete game?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete your game?
-                    This action cannot be undone.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a id="deleteConfirm" href="#" class="btn
-              btn-danger">Delete</a>
                 </div>
             </div>
         </div>
@@ -232,5 +190,5 @@
 
     {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static 'js/quantity_input_script.js' %}"></script>
+    <script src="{% static 'js/quantity_input_script.js' %}"></script>
     {% endblock %}
