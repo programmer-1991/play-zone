@@ -154,6 +154,7 @@ This database schema lays out the structure for the Play Zone application, givin
 ### Wireframes
 
 ## Features
+
 ### Existing features
 
 - **Landing page**
@@ -263,36 +264,36 @@ This database schema lays out the structure for the Play Zone application, givin
 
 #### Html validation
 
-### HTML Validation
-
 I used the[W3C Markup Validation](https://validator.w3.org/) service to check the HTML code of my project for compliance with web standards. This tool is essential for identifying syntax errors and ensuring robust and standard-compliant HTML.
 
 The HTML pages were extracted from dev tools using Google Chrome's inspect feature and then copy the HTML code for every page from sources. This code doesn't include Django Template Language to avoid validation errors (Some characters are not allowed) when using tools like W3C validator.
 
 | **Tested** | **Result** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-|login.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|logout.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|signup.html| One error: can't fix | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|contact.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|index.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|products.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|product_details.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|add_product.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|add_game.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|add_console.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|edit_product.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|edit_game.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|edit_console.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|bag.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme/screenshots/create_post.png)</details>| ✅ |
-|checkout.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme/screenshots/create_game.png)</details>| ✅ |
-|checkout_success.html| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| ✅ |
-|404.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme/screenshots/game_list.png)</details>| ✅ |
+|login.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/login.png)</details>| ✅ |
+|logout.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/logout.png)</details>| ✅ |
+|signup.html| One error: can't fix | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/register.png)</details>| ✅ |
+|contact.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/contact.png)</details>| ✅ |
+|index.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/index.png)</details>| ✅ |
+|products.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/products.png)</details>| ✅ |
+|product_details(game).html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/product_details_game.png)</details>| ✅ |
+|product_details(console).html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/product_details_console.png)</details>| ✅ |
+|add_product.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/add_product.png)</details>| ✅ |
+|add_game.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/add_game.png)</details>| ✅ |
+|add_console.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/add_console.png)</details>| ✅ |
+|edit_product.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/edit_product.png)</details>| ✅ |
+|edit_game.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/edit_game.png)</details>| ✅ |
+|edit_console.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/edit_console.png)</details>| ✅ |
+|bag.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/bag.png)</details>| ✅ |
+|checkout.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/checkout.png)</details>| ✅ |
+|checkout_success.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/checkout_success.png)</details>| ✅ |
+|404.html| No errors | <details><summary>Screenshot of result</summary>![Result](./readme_images/html/404.png)</details>| ✅ |
 |
 
-  - __unfixed errors__:
+  - __unfixed errors:__
     - register.html: `ul` element is not supposed to be in `small element`. This page is a crispy form and the unordered list is requirements for password field and are built-in in the form. I can't manually change the structure of it.
-
+  - __Exeptional case:__
+    - All `Add` and `Edit` pages for product, game details and console specs Can only be checked and validated by input because the form content is restricted to superusers, The only is to copy the page source code and paste it manually. 
 #### Css validation
 
 | **Tested** | **Result** | **View Result** | **Pass** |
@@ -604,9 +605,6 @@ PlayZone stands as a B2C e-commerce platform, dedicated to gaming enthusiasts th
 ### Site Features and User Experience:
 PlayZone's user-friendly design includes a simplified purchasing procedure, committed customer service, and easy navigation. We want every visitor to be able to quickly locate their favorite games and systems and stay updated with the newest releases.
 
-### Business model
-### Marketing strategy
-
 ## Search Engine Optimization
 SEO and Content Strategy: We aim to find and target important search terms related to our variety of latest gaming platforms and products using technologies like WordTracker and Google Trends.
 
@@ -779,7 +777,6 @@ When you create a repository on GitHub.com, it exists as a remote repository. Yo
 - Open your code editor or terminal and navigate to the directory where you want to clone the repository.
 - Run `git clone` followed by the copied URL.
 - Press enter, and Git will clone the repository to your local machine.
-
 
 ## Credits
 - I used walkthrough project Boutique Ado as a base for my project.
