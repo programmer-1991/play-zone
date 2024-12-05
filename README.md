@@ -725,7 +725,7 @@ important page urls, making sure that search engines can navigate through them. 
 
 ### Content
 - I used semantic elements in my project to keep a structure that is customized for SEO.
-- I used keywords in headings and put them in strong tags to emphasize it's importance. I did the same with product names and categories in products list,  product details page, game details and console specs sections.
+- I used keywords in headings and put them in strong tags to emphasize it's importance. I did the same with product names, categories and relevant words in products list,  product details page, game details and console specs sections.
 - The project has internal links that leads to all pages to help users to continue exploring my site.
 - I used external links for each product either a game or console that provides more information about the product and they link to official sites for Sony Playstation, Microsoft Xbox and Nintendo.
 
