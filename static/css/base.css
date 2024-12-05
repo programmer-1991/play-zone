@@ -15,7 +15,10 @@ dt {
 .details {
     max-width: max-content;
 }
-
+/*******height********/
+.height {
+    height: 150px;
+}
 /* from Bulma */
 .icon {
     align-items: center;

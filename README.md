@@ -144,11 +144,15 @@ This database schema lays out the structure for the Play Zone application, givin
 
 ## Design
 ### Color
-- I used the same coulours used in the walkthrough project Boutique Ado.
+
+- I used A striking and vibrant shade of blue `#007bff` for logo and account and bag icons in the header. I used the same color for *github* and *linkedin* icon links in the footer. This color exudes energy and confidence.
+- I used dark colors #555555, #000000, #343a40 for navbar menu links headlines and website content. I used for buttons a dark background color and white text that contrasts well with it. Buttons that cancels actions are the opposite, a white background with a black text.
+- Buttons that takes the user to official sites for more information about products, has a blue color `#007bff` and white text that contrasts well with it.
+
 ### Typography
 
 - Lato's readability and versatility are perhaps the main reasons it was chosen for 
-  the MarketFlex platform. Lato is appropriate for a variety of purposes since it strikes a balance between somber and amiable tones. For an e-commerce site where clear communication is essential, its well-structured characters improve readability.
+  my game store. Lato is appropriate for a variety of purposes since it strikes a balance between somber and amiable tones. For an e-commerce site where clear communication is essential, its well-structured characters improve readability.
 
 ### Layout
 ### Wireframes
@@ -158,7 +162,7 @@ This database schema lays out the structure for the Play Zone application, givin
 ### Existing features
 
 - **Landing page**
-  - This page contains an advertisement message to attract customers and a call to action button `SHOP NOW` that takes the customer to all products list.
+  - This page contains an advertisement message to attract customers and a call to action button `EXPLORE` that takes the customer to all products list.
 
 - **logo**
   - The logo is the store name and when clicked it takes you back to the landing page.
