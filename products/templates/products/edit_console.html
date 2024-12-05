@@ -10,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
 <div class="container">
     {% if request.user.is_superuser %}
     <div class="row">
@@ -32,9 +31,9 @@
                     <button class="btn btn-black rounded-0" type="submit">Update</button>
                 </div>
             </form>
-    {% else %}
-    <p class=" h4 text-center p-4">Only superusers can edit content</p>
-    {% endif %}
+            {% else %}
+            <p class=" h4 text-center p-4">Only superusers can edit content</p>
+            {% endif %}
         </div>
     </div>
 </div>
