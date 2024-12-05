@@ -17,7 +17,7 @@ def contact(request):
             messages.error(request, 'Failed to send a message!')
     else:
         form = ContactForm()
-        
+
     template = 'contact/contact.html'
     context = {
         'form': form,

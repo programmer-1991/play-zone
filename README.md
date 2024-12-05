@@ -350,6 +350,39 @@ The HTML pages were extracted from dev tools using Google Chrome's inspect featu
 
 #### Python validation
 
+[PEP 8](https://pep8ci.herokuapp.com/) serves as a comprehensive style guide for writing Python code, emphasizing consistency and readability as its core principles. It offers guidance on code formatting, variable and function naming conventions, and various best practices. Adhering to PEP 8 principles contributes to enhancing code quality, making it more readable and maintainable.
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+| game_store/settings.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/settings.png)</details> | ✅ |
+| game_store/urls.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/gamestore_urls.png)</details> | ✅ |
+| game_store/views.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/gamestore_views.png)</details> | ✅ |
+| products/models.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/products_models.png)</details> | ✅ |
+| products/views.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/products_views.png)</details> | ✅ |
+| products/forms.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/products_forms.png)</details> | ✅ |
+| products/urls.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/products_urls.png)</details> | ✅ |
+| products/admin.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/products_admin.png)</details> | ✅ |
+| products/widgets.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/products_widgets.png)</details> | ✅ |
+| home/urls.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/home_urls.png)</details> | ✅ |
+| home/views.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/home_views.png)</details> | ✅ |
+| contact/models.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/contact_models.png)</details> | ✅ |
+| contact/views.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/contact_views.png)</details> | ✅ |
+| contact/forms.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/contact_forms.png)</details> | ✅ |
+| contact/urls.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/contact_urls.png)</details> | ✅ |
+| contact/admin.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/contact_admin.png)</details> | ✅ |
+| checkout/models.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_models.png)</details> | ✅ |
+| checkout/views.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_views.png)</details> | ✅ |
+| checkout/forms.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_forms.png)</details> | ✅ |
+| checkout/urls.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_urls.png)</details> | ✅ |
+| checkout/admin.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_admin.png)</details> | ✅ |
+| checkout/apps.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_apps.png)</details> | ✅ |
+| checkout/signals.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_signals.png)</details> | ✅ |
+| checkout/webhook_handler.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_webhook_handler.png)</details> | ✅ |
+| checkout/webhooks.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/checkout_webhooks.png)</details> | ✅ |
+| bag/contexts.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/bag_contexts.png)</details> | ✅ |
+| bag/views.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/readme_images/python/bag_views.png)</details> | ✅ |
+| bag/urls.py | All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](./readme_images/python/bag_urls.png)</details> | ✅ |
+|
 
 ### Manual testing
 #### Security testing

@@ -2,6 +2,8 @@ from django.contrib import admin
 from .models import Product, Category, Game, Console, Platform
 
 # Register your models here.
+
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -23,7 +25,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class GameAdmin(admin.ModelAdmin):
-        list_display = (
+    list_display = (
         'title',
         'platform',
         'release',
@@ -31,17 +33,18 @@ class GameAdmin(admin.ModelAdmin):
 
 
 class ConsoleAdmin(admin.ModelAdmin):
-        list_display = (
+    list_display = (
         'title',
         'platform',
         'release',
     )
 
-        
+
 class PlatformAdmin(admin.ModelAdmin):
-        list_display = (
+    list_display = (
         'name',
     )
+
 
 admin.site.register(Game, GameAdmin)
 admin.site.register(Console, ConsoleAdmin)

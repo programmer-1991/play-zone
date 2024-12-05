@@ -7,6 +7,7 @@ from .forms import ProductForm, GameForm, ConsoleForm
 
 # Create your views here.
 
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -37,18 +38,19 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
             title = "|"+",".join(str(category) for category in categories)
-            
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                 request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+             description__icontains=query)
             products = products.filter(queries)
 
     sorting = f'{sort}_{direction}'
-    
+
     context = {
         'products': products,
         'search': query,
@@ -71,6 +73,7 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 def add_product(request):
     """ Add a product to the store """
     if request.user.is_superuser:
@@ -81,18 +84,20 @@ def add_product(request):
                 messages.success(request, 'Successfully added product!')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
-                messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+                messages.error(request, 'Failed to add product.'
+                               'Please ensure the form is valid.')
         else:
             form = ProductForm()
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 def edit_product(request, product_id):
     """ Edit a product in the store """
@@ -105,7 +110,8 @@ def edit_product(request, product_id):
                 messages.success(request, 'Successfully updated product!')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
-                messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+                messages.error(request, 'Failed to update product.'
+                               'Please ensure the form is valid.')
         else:
             form = ProductForm(instance=product)
             messages.info(request, f'You are editing {product.name}')
@@ -119,6 +125,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 def delete_product(request, product_id):
     """ Delete a product from the store """
@@ -139,18 +146,20 @@ def add_game(request):
                 messages.success(request, 'Successfully added game details!')
                 return redirect(reverse('add_product'))
             else:
-                 messages.error(request, 'Failed to add a game. Please ensure the form is valid.')
+                messages.error(request, 'Failed to add a game.'
+                               'Please ensure the form is valid.')
         else:
             form = GameForm()
     else:
         form = ""
-        
+
     template = 'products/add_game.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 def edit_game(request, game_id):
     """ Edit a product in the store """
@@ -162,18 +171,20 @@ def edit_game(request, game_id):
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Successfully updated game!')
-                if(product):
-                    return redirect(reverse('product_detail', args=[product.id]))
+                if (product):
+                    return redirect(reverse('product_detail',
+                                    args=[product.id]))
                 else:
                     return redirect(reverse('add_product'))
             else:
-                messages.error(request, 'Failed to update game. Please ensure the form is valid.')
+                messages.error(request, 'Failed to update game.'
+                               'Please ensure the form is valid.')
         else:
             form = GameForm(instance=game)
             messages.info(request, f'You are editing {game.title}')
     else:
         form = ""
-    
+
     template = 'products/edit_game.html'
     context = {
         'form': form,
@@ -181,6 +192,7 @@ def edit_game(request, game_id):
     }
 
     return render(request, template, context)
+
 
 def delete_game(request, game_id):
     """ Delete a product from the store """
@@ -199,14 +211,16 @@ def add_console(request):
             form = ConsoleForm(request.POST)
             if form.is_valid():
                 form.save()
-                messages.success(request, 'Successfully added console details!')
+                messages.success(request, 'Successfully'
+                                 ' added console details!')
                 return redirect(reverse('add_product'))
             else:
-                messages.error(request, 'Failed to add a console. Please ensure the form is valid.')
+                messages.error(request, 'Failed to add a console.'
+                               ' Please ensure the form is valid.')
         else:
             form = ConsoleForm()
     else:
-        form = ""    
+        form = ""
     template = 'products/add_console.html'
     context = {
         'form': form,
@@ -214,8 +228,10 @@ def add_console(request):
 
     return render(request, template, context)
 
+
 def edit_console(request, console_id):
-    """ Edit a product in the store """
+    """ Edit a product i
+    n the store """
     console = get_object_or_404(Console, pk=console_id)
     product = console.product
     if request.user.is_superuser:
@@ -224,12 +240,14 @@ def edit_console(request, console_id):
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Successfully updated console!')
-                if(product):
-                    return redirect(reverse('product_detail', args=[product.id]))
+                if (product):
+                    return redirect(reverse('product_detail',
+                                    args=[product.id]))
                 else:
                     return redirect(reverse('add_product'))
             else:
-                messages.error(request, 'Failed to update console. Please ensure the form is valid.')
+                messages.error(request, 'Failed to update console.'
+                               'Please ensure the form is valid.')
         else:
             form = ConsoleForm(instance=console)
             messages.info(request, f'You are editing {console.title}')
@@ -242,6 +260,7 @@ def edit_console(request, console_id):
     }
 
     return render(request, template, context)
+
 
 def delete_console(request, console_id):
     """ Delete a product from the store """
