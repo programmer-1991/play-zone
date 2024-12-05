@@ -98,7 +98,7 @@ PlayZone is an online game store that offers a wide range of game genres and pla
 When creating the database structure schema for this project, I utilized the [drawsql.app](https://drawsql.app/) website. This online tool allowed me to visually design and document the database schema, making it easier to plan and implement the database for my e-commerce web application.
 <center>
 
-![Database Schema image](./readme_images/drawSQL-image-export-2024-11-29.png)
+![Database Schema image](./readme_images/database.png)
 
 </center>
 
@@ -159,11 +159,17 @@ __header__
 - Desktop: The logo is located to the top left corner, the search bar is in the middle and in the top left corner Account and bag icon links. These three elements are together top header. Below top header there is a list of navbar menu links and drop down menus.
 - Mobile: Logo is centered on top. Navbar menu is accessible via a side navigation bar that is aligned with Search, account and bag icons.
 
+![Header](./readme_images/header.png)
+
 __footer__
 - Footer keeps a similar structure on both desktop and mobile version. A newsletter that is centered on top, it's width is responsive to the screen size. Under it there are two social media links.
 
+![Footer](./readme_images/footer.png)
+
 __Landing page__
 - Both desktop and mobile keeps the same structure, a centered headline and call to action button.
+
+![Landing page](./readme_images/landing_page.png)
 
 __products list__
 - Desktop:
@@ -193,6 +199,8 @@ __checkout success page__
 
 __Contact page__
   - A form that is centered and responsive to different screen sizes. Fills screen width on mobile devices.
+
+![contact](./readme_images/contact.png)
 
 ## Features
 
