@@ -147,15 +147,52 @@ This database schema lays out the structure for the Play Zone application, givin
 
 - I used A striking and vibrant shade of blue `#007bff` for logo and account and bag icons in the header. I used the same color for *github* and *linkedin* icon links in the footer. This color exudes energy and confidence.
 - I used dark colors #555555, #000000, #343a40 for navbar menu links headlines and website content. I used for buttons a dark background color and white text that contrasts well with it. Buttons that cancels actions are the opposite, a white background with a black text.
-- Buttons that takes the user to official sites for more information about products, has a blue color `#007bff` and white text that contrasts well with it.
+- Buttons that takes the user to official sites for more information about products, has a blue background color `#007bff` and white text that contrasts well with it.
 
 ### Typography
 
-- Lato's readability and versatility are perhaps the main reasons it was chosen for 
+- I chose Lato font for my website content. Lato's readability and versatility are perhaps the main reasons it was chosen for 
   my game store. Lato is appropriate for a variety of purposes since it strikes a balance between somber and amiable tones. For an e-commerce site where clear communication is essential, its well-structured characters improve readability.
 
 ### Layout
-### Wireframes
+__header__
+- Desktop: The logo is located to the top left corner, the search bar is in the middle and in the top left corner Account and bag icon links. These three elements are together top header. Below top header there is a list of navbar menu links and drop down menus.
+- Mobile: Logo is centered on top. Navbar menu is accessible via a side navigation bar that is aligned with Search, account and bag icons.
+
+__footer__
+- Footer keeps a similar structure on both desktop and mobile version. A newsletter that is centered on top, it's width is responsive to the screen size. Under it there are two social media links.
+
+__Landing page__
+- Both desktop and mobile keeps the same structure, a centered headline and call to action button.
+
+__products list__
+- Desktop:
+  - Products are listed horizentally 4 cards by row.
+- Mobile:
+  - Products are listed vertically one product card by row.
+
+__Product details__
+- Desktop:
+  - Product image section and product information with access to an input box for quantity section are aligned horizentally. Below it more information about the product either game details or console specs. extra information about the product is centered.
+- Mobile: The previously mentioned sections are aligned vertically and fills screen width.
+
+__Bag page__
+- Desktop:
+  - A headline on top indicates the content of the page. Product information, `image, product name, SKU number`, price, quantity input with the possibility to update or delete the selected quantity, and subtotal, are aligned horizontally. Down to the right corner, more detailed information about the bag total and grand total, including delivery, is provided. Below this section, there are two buttons to checkout or keep shopping.  
+
+- Mobile: Keeps a similar structure even with a smaller screen the content is readble and can interact with buttons and adjust quantity. the '+' and '-' buttons are removed in small screens to the quantity input readable and accessible to users.
+
+__Checkout page__
+- Desktop
+  - A headline that indicates the content of the page. Two sections in a row. The first column is a form for user details, delivery adress and payment card information. The second column is an order summary.
+- Mobile
+  - Order summary and forms are aligned vertically and takes full width.
+
+__checkout success page__
+  - Both desktop and mobile versions keeps a similar structure. The page is a card with order information that is responsive to different screen sizes. Below it a button that takes you back to products list.
+
+__Contact page__
+  - A form that is centered and responsive to different screen sizes. Fills screen width on mobile devices.
 
 ## Features
 
@@ -258,14 +295,13 @@ This database schema lays out the structure for the Play Zone application, givin
   - Admin can view a confirmation toast message when adding product or game details or console specs, updating product or game details or console specs and deleting product or game details or console specs.
 
 - **Error Pages**
-  - The site contains custom error page for 404 errors.
+  - The site has a custom error page for 404 errors.
 
 ### Addtional features to implement
-
+  - Users can add reviews about products
+  - Filter products by platform or console
 ## Testing
-
 ### Code validation
-
 #### Html validation
 
 I used the[W3C Markup Validation](https://validator.w3.org/) service to check the HTML code of my project for compliance with web standards. This tool is essential for identifying syntax errors and ensuring robust and standard-compliant HTML.
@@ -409,7 +445,6 @@ The following tests were conducted to verify that unauthorized access attempts a
 |
 
 #### Element testing
-- Clicked game and console external links. The result: Opens in a new tab. PASS 
 
 **header**
 
@@ -477,7 +512,7 @@ The following tests were conducted to verify that unauthorized access attempts a
 | --- | --- | --- | --- |
 | Product image link | When clicked it takes you to the product details page | Clicked on the image link | ✅ |
 | Category link in each product card | When clicked it takes that specific category products list | Clicked on category link | ✅ |
-| Sort drop down menu | View correspondant sorted lists with each 'sort by' option | Clicked on the logout button | ✅ |
+| Sort drop down menu | View correspondant sorted lists with each 'sort by' option | Go through each option in the drop down menu | ✅ |
 |
 &nbsp;
 
